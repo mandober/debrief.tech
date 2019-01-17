@@ -1,8 +1,9 @@
-# PHP debrief
+# Tech debrief
 
-- name: webdev-debrief
-- desc: Misc WebDev notes
-- repo: https://github.com/mandober/webdev-debrief.git
-- date: 2013-02-11
-- stat: wip
-- series: *Digested and excerpted*
+- name: tech-debrief
+- desc: Notes about programming languages, development, technology
+- repo: https://github.com/mandober/tech-debrief.git
+- date: 2017-01-12
+- stat: (wip)
+- none: synaptic strengthener
+- series: Debriefed: Digested & Excerpted
