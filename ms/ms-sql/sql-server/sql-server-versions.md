@@ -1,4 +1,5 @@
-# SQL Server: Docs: Previous Versions
+# SQL Server » Previous Versions
+
 
 SQL Servers:
 - [SQL Server 2012](https://docs.microsoft.com/en-us/previous-versions/sql/sql-server-2012)
@@ -7,7 +8,6 @@ SQL Servers:
 - [SQL Server 2005](https://docs.microsoft.com/en-us/previous-versions/sql/sql-server-2005)
 - [SQL Server 2005 Administrator Guide](https://docs.microsoft.com/en-us/previous-versions/sql/sql-server-2005/administrator/)
 - [SQL Server 2005 Express Administrator Guide](https://docs.microsoft.com/en-us/previous-versions/sql/sql-server-2005/express-administrator/)
-- [SQL Server Compact](https://docs.microsoft.com/en-us/previous-versions/sql/compact)
 
 StreamInsight:
 - [Microsoft StreamInsight](https://docs.microsoft.com/en-us/previous-versions/sql/streaminsight)
@@ -18,9 +18,4 @@ Sync Framework:
 - [Sync Framework 2.0](https://docs.microsoft.com/en-us/previous-versions/sql/synchronization/sync-framework-2.0)
 - [Sync Framework 1.0](https://docs.microsoft.com/en-us/previous-versions/sql/synchronization/sync-framework-1.0)
 - [Synchronization Services for ADO.NET 1.0 SP1](https://docs.microsoft.com/en-us/previous-versions/sql/synchronization/ado.net-1.0-sp1)
-
-Related downloads:
-* [The current version of SQL Server Management Studio (SSMS)](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms)
-* [The current version of SQL Server Data Tools (SSDT)](https://docs.microsoft.com/en-us/sql/ssdt/download-sql-server-data-tools-ssdt)
-
 

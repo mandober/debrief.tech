@@ -1,4 +1,7 @@
-# Tech Debrief » Microsoft
+# Terms
+
+Tech Debrief » Microsoft » Terms
+
 
 
 * SQL Server

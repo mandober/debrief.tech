@@ -1,4 +1,4 @@
-# Tech: Microsoft: Terms
+# Tech » Microsoft » Terms
 
 ## Main
 
@@ -20,8 +20,6 @@
   * Microsoft Eduction
 
 
-
- 
 
 
 ## Details
@@ -54,5 +52,3 @@
 * Azure
 * Microsoft Software
   - Microsoft Sync Framework
-
-
