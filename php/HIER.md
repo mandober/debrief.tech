@@ -1,6 +1,113 @@
-# PHP
+# PHP Ecosystem
 
-PHP > PHP Manual >
+* PHP Implementations
+  - HHVM
+  - HPHPc
+  - Parrot
+  - Phalanger
+  - Quercus
+  - Zend Engine
+
+* PHP Internals
+  - PEAR
+  - Accelerator
+  - Composer
+
+* PHP components:
+  * Libraries
+  * Frameworks
+  * Web apps
+
+* PHP ORM
+  - Doctrine
+  - Propel
+
+* PHP frameworks
+  - Laravel
+  - Symfony
+  - CakePHP
+  - CodeIgniter
+  - Nette Framework
+  - Fat-Free
+  - FuelPHP
+
+* PHP Testing frameworks
+  - Behat
+  - PHPUnit
+  - PHP Unit Testing Framework
+  - Lime (Symfony)
+
+* PHP IDE
+  Aptana
+  Codelobster
+  Eclipse PDT
+  NetBeans 
+  PHPEdit
+  PhpStorm
+  RadPHP
+  Zend Studio
+
+* PHP Widget toolkit
+  - PHP-GTK
+  - PHP-Qt
+  - wxPHP
+
+* PHP Web Apps
+  * CMS
+    - Drupal
+    - Joomla!
+    - eZ Publish
+    - WordPress
+    - XOOPS
+  * misc
+    - Horde
+    - Li3 (formerly Lithium)
+    - Midgard
+    - MODx
+    - Phalcon
+    - Pop PHP
+    - PHP-Fusion
+    - PRADO
+    - Qcodo
+    - Silex
+    - SilverStripe
+    - TYPO3
+    - Xaraya
+    - Yii
+    - Zend Framework
+    - Zeta Components
+
+
+* PHP Interface Type
+  * SAPI (Server API)
+    - aolserver
+    - apache
+    - apache2filter
+    - apache2handler
+    - caudium
+    - cgi (until PHP 5.3)
+    - cgi-fcgi
+    - cli
+    - cli-server
+    - continuity
+    - embed
+    - fpm-fcgi
+    - isapi
+    - litespeed
+    - milter
+    - nsapi
+    - phttpd
+    - pi3web
+    - roxen
+    - thttpd
+    - tux
+    - webjames
+
+
+
+# PHP Manual
+
+PHP > PHP Manual:
 
 * PHP Installation and Configuration
   - Installation
@@ -20,80 +127,11 @@ PHP > PHP Manual >
       - dbx
     * Vendor Specific Database Extensions
       - Mssql (Microsoft SQL Server)
-        - Introduction
-        - Installing and configuring
-        - Predefined Constants
-        * Mssql Functions
-          - `mssql_bind` Adds a parameter to a stored procedure or a remote stored procedure
-          - `mssql_close` Close MS SQL Server connection
-          - `mssql_connect` Open MS SQL server connection
-          - `mssql_data_seek` Moves internal row pointer
-          - `mssql_execute` Executes a stored procedure on a MS SQL server database
-          - `mssql_fetch_array` Fetch a result row as an associative array, a numeric array,        -  or both
-          - `mssql_fetch_assoc` Returns an associative array of the current row in the        - result
-          - `mssql_fetch_batch` Returns the next batch of records
-          - `mssql_fetch_field` Get field information
-          - `mssql_fetch_object` Fetch row as object
-          - `mssql_fetch_row` Get row as enumerated array
-          - `mssql_field_length` Get the length of a field
-          - `mssql_field_name` Get the name of a field
-          - `mssql_field_seek` Seeks to the specified field offset
-          - `mssql_field_type` Gets the type of a field
-          - `mssql_free_result` Free result memory
-          - `mssql_free_statement` Free statement memory
-          - `mssql_get_last_message` Returns the last message from the server
-          - `mssql_guid_string` Converts a 16 byte binary GUID to a string
-          - `mssql_init Initializes` a stored procedure or a remote stored procedure
-          - `mssql_min_error_severity` Sets the minimum error severity
-          - `mssql_min_message_severity` Sets the minimum message severity
-          - `mssql_next_result` Move the internal result pointer to the next result
-          - `mssql_num_fields` Gets the number of fields in result
-          - `mssql_num_rows` Gets the number of rows in result
-          - `mssql_pconnect` Open persistent MS SQL connection
-          - `mssql_query` Send MS SQL query
-          - `mssql_result` Get result data
-          - `mssql_rows_affected` Returns the number of records affected by the query
-          - `mssql_select_db` Select MS SQL database
       - MySQL (MySQL Drivers and Plugins)
       - MongoDB
       - PostgreSQL
       - SQLite3
       * SQLSRV (Microsoft SQL Server Driver for PHP)
-        * Introduction
-          - Installation
-          - Configuration
-          - Requirements
-          - Installation
-          - Runtime Configuration
-          - Resource Types
-        - Predefined Constants
-        * SQLSRV Functions
-          - sqlsrv_begin_transaction — Begins a database transaction
-          - sqlsrv_cancel — Cancels a statement
-          - sqlsrv_client_info — Returns information about the client and specified connection
-          - sqlsrv_close — Closes an open connection and releases resourses associated with the connection
-          - sqlsrv_commit — Commits a transaction that was begun with sqlsrv_begin_transaction
-          - sqlsrv_configure — Changes the driver error handling and logging configurations
-          - sqlsrv_connect — Opens a connection to a Microsoft SQL Server database
-          - sqlsrv_errors — Returns error and warning information about the last SQLSRV operation performed
-          - sqlsrv_execute — Executes a statement prepared with sqlsrv_prepare
-          - sqlsrv_fetch_array — Returns a row as an array
-          - sqlsrv_fetch_object — Retrieves the next row of data in a result set as an object
-          - sqlsrv_fetch — Makes the next row in a result set available for reading
-          - sqlsrv_field_metadata — Retrieves metadata for the fields of a statement prepared by sqlsrv_prepare or sqlsrv_query
-          - sqlsrv_free_stmt — Frees all resources for the specified statement
-          - sqlsrv_get_config — Returns the value of the specified configuration setting
-          - sqlsrv_get_field — Gets field data from the currently selected row
-          - sqlsrv_has_rows — Indicates whether the specified statement has rows
-          - sqlsrv_next_result — Makes the next result of the specified statement active
-          - sqlsrv_num_fields — Retrieves the number of fields (columns) on a statement
-          - sqlsrv_num_rows — Retrieves the number of rows in a result set
-          - sqlsrv_prepare — Prepares a query for execution
-          - sqlsrv_query — Prepares and executes a query
-          - sqlsrv_rollback — Rolls back a transaction that was begun with sqlsrv_begin_transaction
-          - sqlsrv_rows_affected — Returns the number of rows modified by the last INSERT, UPDATE, or DELETE query executed
-          - sqlsrv_send_stream_data — Sends data from parameter streams to the server
-          - sqlsrv_server_info — Returns information about the server
       - SQLite
       - Firebird/InterBase
       - DB++
@@ -244,29 +282,3 @@ PHP > PHP Manual >
           - requires: `Visual C++ Redistributable for VS2017 x64` (or x86)
       * Modules
         - `.dll`
-* Resources
-  - Accelerators
-  - Composer
-  - Libraries
-  - PEAR
-* Implementations
-  - HHVM
-  - HPHPc
-  - Parrot
-  - Phalanger
-  - Quercus
-  - Zend Engine
-* PHP frameworks
-    CakePHP CodeIgniter Drupal eZ Publish Fat-Free FuelPHP Horde Joomla!
-    Laravel Li3 (formerly Lithium) Midgard MODx Nette Framework Phalcon 
-    Pop PHP PHP-Fusion PRADO Qcodo Silex SilverStripe Symfony TYPO3 
-    WordPress Xaraya XOOPS Yii Zend Framework Zeta Components
-* Testing
-  Behat PHPUnit PHP Unit Testing Framework Lime (Symfony)
-* ORM
-  Doctrine
-  Propel
-* Widget toolkit
-  PHP-GTK
-  PHP-Qt
-  wxPHP
