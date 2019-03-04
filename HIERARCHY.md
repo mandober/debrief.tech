@@ -1,6 +1,82 @@
-# WebDev
+# Tech
 
-* WebDev
+Tech Debrief is about practical aspect of CS i.e. concrete implementations.
+CS Debrief is all about the theory behind the technology
+
+
+* Data
+  * Data exchange
+    * XML
+      - XML schema
+        - DTD
+      - XML namespace
+      - XML mapping
+      - XHTML
+      * Style
+        - XSL
+        - XSL-FO
+      * Transform
+        - XSLT
+      * Query
+        - XPath
+        - XQuery
+        - XProc
+        - XLink
+        - XPointer
+        - XInclude
+    - WSDL
+    - SOAP
+  * Database
+    * Engines
+    * Tools
+    * DDL/DML
+      - SQL
+      - ANSI-SQL
+      - T-SQL
+    * Database modeling
+      - UDM
+* Programming Languages
+  * General PL
+    * C family
+      - C
+      - C++
+      - Rust
+    * JVM
+      - Java
+      - Scala
+      - Kotlin
+      - Clojure
+    * CLR
+      - C#
+      - F#
+      - VB.NET
+  * Scripting
+    - bash
+    - batch
+    - PowerShell
+    - htaccess
+  * Markup
+    - HTML
+    - CSS
+    - XML
+    - JSON
+    - TOML
+    - Markdown
+    - ASCII Doctor
+    - Restructured Text
+    - Ini
+    * Tex-based
+      - Latex
+      - Katex
+      - MathJax
+    - MathML
+  * DSL
+    - SQL
+* Networking
+  * DNS
+    * DNS Servers
+    - BIND
+* Web Platform
   * Web Language Stack
     * Front-end
       - HTML
@@ -11,10 +87,11 @@
         - CSS Frameworks
           - Bass
       - JavaScript
+        - JS Frameworks
+        - JS Libraries
+        - JS TDD
     * Back-end
       - Node
-  * DNS
-    - BIND
   * HTTP
     * HTTP versions
       - HTTP 1.0
