@@ -1,5 +1,5 @@
 # Tech Debrief
 
-- name: `tech-debrief`
-- desc: Notes about practical aspects of CS
-- repo: https://github.com/mandober/tech-debrief.git
+- repo: `debrief.tech`
+- desc: Notes about various tech: dev, ops, products, apps.
+- link: https://github.com/mandober/debrief.tech.git

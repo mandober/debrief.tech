@@ -1,5 +1,1 @@
-# Summary
-
-* [README](README.md)
-
-## Title
+# SUMMARY
