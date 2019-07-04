@@ -1,5 +1,5 @@
-# HIERARCHY: WEB PLATFORM
- 
+# WEB PLATFORM HIERARCHY
+
 * Web Platform
   * Web Language Stack
     * Front-end
