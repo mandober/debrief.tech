@@ -1,0 +1,73 @@
+- .NET Compiler Platform (Roslyn)
+- .NET Core
+- .NET Foundation
+- .NET Framework
+- .NET Reflector (decompiler tool)
+- .NET Remoting
+- .NET Standard
+- ADO.NET
+- AJAX
+- ASP.NET
+- ASP.NET Core
+- ATL
+- Base Class Library (BCL)
+- Blend (IDE)
+- C# (language)
+- CLR Profiler (profiler tool)
+- CodeArmor (obfuscator tool)
+- COM Interop
+- Common Language Infrastructure (CLI)
+- Common Language Runtime (CLR)
+- Common Language Specification (CLS)
+- Common Type System
+- Core Dynamic Data
+- Dotfuscator (obfuscator tool)
+- DotGNU (implementation, deprecated)
+- dotPeek (decompiler tool)
+- Dynamic Language Runtime
+- Entity Framework
+- Express (IDE)
+- Extensible Application Markup Language (XAML)
+- F# (language)
+- Framework Class Library (FCL)
+- ILAsm (IL Assembler)
+- Intermediate Language Assembler (ILasm)
+- Language Integrated Query (LINQ)
+- LINQ
+- Managed Extensibility Framework
+- MFC
+- Microsoft Silverlight
+- Microsoft XNA
+- ML.NET (machine learning platform)
+- Mono (implementation)
+- MonoDevelop (IDE)
+- MVC
+- Native Image Generator (NGen)
+- NGen (Native Image Generator)
+- ODBC
+- Parallel Extensions
+- Portable.NET (implementation, deprecated)
+- Q# (language)
+- Razor pages
+- Reshaper (code assistance tool)
+- Roslyn (.NET Compiler Platform) compiler
+- SharpDevelop (IDE)
+- SmartAssembly (obfuscator tool)
+- SQL Server
+- T-SQL (Transaction SQL)
+- Universal Windows programs (UWP)
+- Uno (crossplatform framework tool)
+- VB (language)
+- Virtual Execution System (VES)
+- Visual Studio
+- Visual Studio (IDE)
+- WCF Data Services
+- Web Forms
+- Windows Communication Foundation (WCF)
+- Windows Forms (WinForms)
+- Windows Identity Foundation (WIF)
+- Windows Presentation Foundation (WPF)
+- Windows Universal Platform (WUP)
+- Windows Workflow Foundation (WWF)
+- Xamarin Studio (IDE)
+- XAML (markup language)
