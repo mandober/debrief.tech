@@ -1,5 +1,25 @@
 # TECH SUBJECTS
 
+bash
+docker
+dotnet
+git
+linux
+markdown
+ms
+mysql
+powershell
+publishing
+pwsh
+sql
+tex
+vscode
+web-platform
+webdev
+windows
+wsl
+xml
+
 
 ## Databases
   - Database modeling
