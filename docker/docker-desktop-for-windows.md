@@ -1,1 +1,0 @@
-# Docker Desktop for Windows
