@@ -1,1 +1,0 @@
-# Drives"Drives" or conexts are collection of catalogizable items, expanded from disk drives to other collections as soon as it makes even the slightest sense.- `C:`, `T:`   disk context- `Env:`       environment context- `Alias:`     alias drive```# change into C drivecd C:# change into env environment "drive":cd Env:```

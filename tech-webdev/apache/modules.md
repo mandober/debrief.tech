@@ -1,1 +1,0 @@
-# Moduleshttp://httpd.apache.org/docs/2.4/mod/Directive Indexhttp://httpd.apache.org/docs/2.4/mod/directives.htmlModules:- mod_negotiation  Content Negotiation

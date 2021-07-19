@@ -1,1 +1,0 @@
-# Directive Indexhttp://httpd.apache.org/docs/2.4/mod/directives.html
