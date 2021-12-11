@@ -1,0 +1,1 @@
+https://www.gnu.org/software/coreutils/Decoded: GNU coreutilshttp://www.maizure.org/projects/decoded-gnu-coreutils/September 2019source code at githubhttps://github.com/MaiZure/coreutils-8.3/tree/master/src
