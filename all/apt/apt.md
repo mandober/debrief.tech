@@ -1,1 +1,0 @@
-apt -o DPkg::Progress-Fancy=false -o APT::Color=false or add Binary::apt::DPkg::Progress-Fancy "false"; and Binary::apt::APT::Color "false"; to a new file in /etc/apt/apt.conf.dapt   -o DPkg::Progress-Fancy=false   -o APT::Color=false  or  add Binary::apt::DPkg::Progress-Fancy "false";  and Binary::apt::APT::Color "false"to a new file in `/etc/apt/apt.conf.d`

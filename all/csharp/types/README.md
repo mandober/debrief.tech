@@ -1,4 +1,0 @@
-# Types
-
-debrief::lang::types
-
