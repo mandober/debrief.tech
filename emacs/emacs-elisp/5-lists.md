@@ -1,0 +1,15 @@
+5. List
+  - 5.1 Lists and Cons Cells
+  - 5.2 Predicates on Lists
+  - 5.3 Accessing Elements of Lists
+  - 5.4 Building Cons Cells and Lists
+  - 5.5 Modifying List Variables
+  - 5.6 Modifying Existing List Structure
+    - 5.6.1 Altering List Elements with setcar
+    - 5.6.2 Altering the CDR of a List
+    - 5.6.3 Functions that Rearrange Lists
+  - 5.7 Using Lists as Sets
+  - 5.8 Association Lists
+  - 5.9 Property Lists
+    - 5.9.1 Property Lists and Association Lists
+    - 5.9.2 Property Lists Outside Symbols

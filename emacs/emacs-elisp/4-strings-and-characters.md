@@ -1,0 +1,11 @@
+4. Strings and Characters
+  - 4.1 String and Character Basics
+  - 4.2 Predicates for Strings
+  - 4.3 Creating Strings
+  - 4.4 Modifying Strings
+  - 4.5 Comparison of Characters and Strings
+  - 4.6 Conversion of Characters and Strings
+  - 4.7 Formatting Strings
+  - 4.8 Custom Format Strings
+  - 4.9 Case Conversion in Lisp
+  - 4.10 The Case Table

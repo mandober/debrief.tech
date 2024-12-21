@@ -1,0 +1,108 @@
+# Configs and Configurability
+
+- environment variables
+- shell variables
+- scalar (with attribute - or -i)
+- integer (with attribute -i)
+- readonly (with attribute -r)
+- nameref (with attribute -n)
+- indexed array (with attribute -a)
+- associated array (with attribute -A)
+- combined attributes
+- unset = set to ϵ?
+- vars with no attr
+- unset var
+- undefined var
+- value
+  - apparent types of values
+    - string
+    - command
+    - csv (character-separated values)
+    - single juxtaposed characters
+    - number
+  - with special value (if unset kaboom)
+- origin
+  - Bourne shell
+  - bash
+- var attributes
+  - exported (always have attr -x)
+  - lowercase value on assing
+  - uppercase value on assing
+- bash setopt
+- bash shopt
+- bash alias
+- bash keyword
+- bash builtin
+- bash function
+- bash metacharacter
+- bash special character
+- bash special token
+- bash redirection operator
+- readline veriable
+- readline function
+- command
+  - internal
+    - alias
+    - keyword
+    - function
+    - builtin
+  - external
+    - executable binary file, program
+    - executable script
+  - sourceable file
+- config file
+- programs
+  - stty
+- users
+- groups
+- ulimit
+- FDs
+- command line
+- program name
+- prefix program
+- command line arguments
+- command line options
+  - non-option argument (payload/subject usually)
+  - main subject: `git`
+  - main subject + options: `git --log`
+  - main subject + section: `git config`
+  - main subject + section + options: `git config --set name=value`
+  - option
+  - introducing options
+    - option introduction sign
+      - dash for short option names
+      - double dash for long option names
+      - non standard:
+        - ϵ intro sign, `out`
+        - dash for long options, `-long-option` (!)
+  - options with arguments
+    - required argument
+    - optional argument
+    - separating an argument from option name:
+      - juxtaposition: `--outputFILE`  or `-oFILE`
+      - equal sign:    `--output=FILE` or `-o=FILE`
+      - space:         `--output FILE` or `-o FILE` 
+  - option names
+    - short options
+      - clustered short options, `-vFo`
+    - long options
+      - abbreviated long options
+        - can be shortened if not ambiguous
+          - --version
+          - --versio
+          - --versi
+          - --vers
+          - --ver
+          - --ve
+          - --v
+  - special options
+    - dash (-)
+    - dash dash (--)
+  - special options
+    - common options
+      - help
+      - version
+- programs
+  - program names
+  - program options
+    - program options which contain `=`

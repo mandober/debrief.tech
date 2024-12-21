@@ -1,0 +1,133 @@
+# Commands :: Index
+
+Command | Category    | Desc
+--------|-------------|------
+        | binutils    |                          
+        | coreutils   |                          
+        | dateutils   |                          
+        | diffutils   |                          
+        | findutils   |                          
+        | idutils     |                        
+        | inetutils   |                          
+        | paxutils    |                          
+        | recutils    |                          
+        | shadowutils |                            
+        | sharutils   |                          
+        | sysutils    |                          
+
+
+
+nfs-utils 2.7.1 (21-Aug-2024)
+https://mirrors.edge.kernel.org/pub/linux/utils/nfs-utils/
+https://mirrors.edge.kernel.org/pub/linux/utils/
+
+
+
+cat
+tac
+nl
+od
+base32
+base64
+basenc
+head
+tail
+split
+csplit
+fmt
+pr
+fold
+wc
+sum
+cksum
+b2sum
+md5sum
+sha1sum
+sha2
+sort
+shuf
+uniq
+comm
+ptx
+tsort
+cut
+paste
+join
+tr
+expand
+unexpand
+ls
+dir
+vdir
+dircolors
+(pwd)
+cp
+dd
+install
+mv
+rm
+shred
+mkdir
+rmdir
+unlink
+mkfifo
+mknod
+ln
+link
+readlink
+chgrp
+chmod
+chown
+touch
+df
+du
+stat
+sync
+truncate
+echo
+printf
+yes
+false
+true
+test
+expr
+tee
+dirname
+basename
+pathchk
+mktemp
+realpath
+pwd
+printenv
+stty
+tty
+set
+printenv
+stty
+tty
+id
+logname
+whoami
+groups
+users
+who
+date
+arch
+nproc
+uname
+hostname
+hostid
+uptime
+chcon
+runcon
+chroot
+env
+nice
+nohup
+stdbuf
+timeout
+kill
+sleep
+factor
+numfmt
+seq

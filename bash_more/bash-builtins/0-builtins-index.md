@@ -1,0 +1,170 @@
+# bash builtins :: Index of all builtins
+
+https://www.gnu.org/software/bash/manual/html_node/Builtin-Index.html#Builtin-Index
+
+https://www.gnu.org/software/bash/manual/html_node/Reserved-Word-Index.html#Reserved-Word-Index
+
+https://www.gnu.org/software/bash/manual/html_node/Variable-Index.html#Variable-Index
+
+https://www.gnu.org/software/bash/manual/html_node/Function-Index.html#Function-Index
+
+https://www.gnu.org/software/bash/manual/html_node/Concept-Index.html#Concept-Index
+
+```bash
+# list bash builtins (61 names)
+compgen -b
+```
+
+- .
+- :
+- [
+- alias
+- bg
+- bind
+- break
+- builtin
+- caller
+- cd
+- command
+- compgen
+- complete
+- compopt
+- continue
+- declare
+- dirs
+- disown
+- echo
+- enable
+- eval
+- exec
+- exit
+- export
+- false
+- fc
+- fg
+- getopts
+- hash
+- help
+- history
+- jobs
+- kill
+- let
+- local
+- logout
+- mapfile
+- popd
+- printf
+- pushd
+- pwd
+- read
+- readarray
+- readonly
+- return
+- set
+- shift
+- shopt
+- source
+- suspend
+- test
+- times
+- trap
+- true
+- type
+- typeset
+- ulimit
+- umask
+- unalias
+- unset
+- wait
+
+
+## Index
+
+- Bourne shell builtins
+- bash builtins
+- job control builtins
+- programmable completion builtins
+- directory stack builtins
+- set builtin
+- shopt builtin
+
+
+Builtin | Section
+
+.   Bourne Shell Builtins
+:   Bourne Shell Builtins
+[   Bourne Shell Builtins
+  
+alias:   Bash Builtins
+ 
+bg:   Job Control Builtins
+bind:   Bash Builtins
+break:   Bourne Shell Builtins
+builtin:   Bash Builtins
+  
+caller:   Bash Builtins
+cd:       Bourne Shell Builtins
+command:   Bash Builtins
+compgen:   Programmable Completion Builtins
+complete:   Programmable Completion Builtins
+compopt:   Programmable Completion Builtins
+continue:   Bourne Shell Builtins
+
+declare:   Bash Builtins
+dirs:   Directory Stack Builtins
+disown:   Job Control Builtins
+
+echo:   Bash Builtins
+enable:   Bash Builtins
+eval:   Bourne Shell Builtins
+exec:   Bourne Shell Builtins
+exit:   Bourne Shell Builtins
+export:   Bourne Shell Builtins
+  
+fc:   Bash History Builtins
+fg:   Job Control Builtins
+  
+getopts:   Bourne Shell Builtins
+  
+hash:   Bourne Shell Builtins
+help:   Bash Builtins
+history:   Bash History Builtins
+  
+jobs:   Job Control Builtins
+  
+kill:   Job Control Builtins
+  
+let:   Bash Builtins
+local:   Bash Builtins
+logout:   Bash Builtins
+  
+mapfile:   Bash Builtins
+  
+popd:   Directory Stack Builtins
+printf:   Bash Builtins
+pushd:   Directory Stack Builtins
+pwd:   Bourne Shell Builtins
+  
+read:   Bash Builtins
+readarray:   Bash Builtins
+readonly:   Bourne Shell Builtins
+return:   Bourne Shell Builtins
+  
+set:   The Set Builtin
+shift:   Bourne Shell Builtins
+shopt:   The Shopt Builtin
+source:   Bash Builtins
+suspend:   Job Control Builtins
+  
+test:   Bourne Shell Builtins
+times:   Bourne Shell Builtins
+trap:   Bourne Shell Builtins
+type:   Bash Builtins
+typeset:   Bash Builtins
+  
+ulimit:   Bash Builtins
+umask:   Bourne Shell Builtins
+unalias:   Bash Builtins
+unset:   Bourne Shell Builtins
+  
+wait:   Job Control Builtins

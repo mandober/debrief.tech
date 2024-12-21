@@ -1,0 +1,36 @@
+# Options table :: Legend
+
+Option categories
+- option type
+  - Boolean
+  - String
+  - Number
+- option values
+  - show value, :set {opt}?
+  - set value of Bool option, :set {opt}
+  - toggle Bool option, :set {opt}!
+  - reset Bool option, :set {opt}&
+- value manipulation
+  - String value
+    - append,  +=
+    - prepend, ^=
+  - Number value
+    - add, +=
+    - mul, ^=
+  - List value
+  - Flags value
+- option format
+  - Boolean: 0/1
+  - String-List
+    - (list of) Flags, juxtaposed characters, (aAbCD)
+    - CSL comma-separated list (vim,vi,elvis)
+    - NSL colon-separated list (onetime:long:match)
+    - comma-separated list with colon-separated sublists (vi:m,un:do)
+    - colon-separated list with comma-separated sublists (a,A:b,BC:c,d)
+- option default value
+  - default value
+  - Vi default value
+  - Vim default value
+- option scope
+  - global
+  - local (local to buffer)

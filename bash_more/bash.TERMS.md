@@ -1,0 +1,73 @@
+# Bash :: Terms
+
+- Builtin Index • Index of Bash builtin commands.
+- Concept Index • General index for concepts described in this manual.
+- Variable Index • Quick reference helps you find the variable you want.
+- Reserved Word Index • Index of Bash reserved words.
+- Readline Functions Index • Index of bindable Readline functions.
+
+
+## Builtin Index • Index of Shell Builtin Commands
+
+Index | Entry | Section
+
+- `.`: Bourne Shell Builtins
+- `:`: Bourne Shell Builtins
+- `[`: Bourne Shell Builtins
+
+alias: Bash Builtins
+bg: Job Control Builtins
+bind: Bash Builtins
+break: Bourne Shell Builtins
+builtin: Bash Builtins
+caller: Bash Builtins
+cd: Bourne Shell Builtins
+command: Bash Builtins
+compgen: Programmable Completion Builtins
+complete: Programmable Completion Builtins
+compopt: Programmable Completion Builtins
+continue: Bourne Shell Builtins
+declare: Bash Builtins
+dirs: Directory Stack Builtins
+disown: Job Control Builtins
+echo: Bash Builtins
+enable: Bash Builtins
+eval: Bourne Shell Builtins
+exec: Bourne Shell Builtins
+exit: Bourne Shell Builtins
+export: Bourne Shell Builtins
+fc: Bash History Builtins
+fg: Job Control Builtins
+getopts: Bourne Shell Builtins
+hash: Bourne Shell Builtins
+help: Bash Builtins
+history: Bash History Builtins
+jobs: Job Control Builtins
+kill: Job Control Builtins
+let: Bash Builtins
+local: Bash Builtins
+logout: Bash Builtins
+mapfile: Bash Builtins
+popd: Directory Stack Builtins
+printf: Bash Builtins
+pushd: Directory Stack Builtins
+pwd: Bourne Shell Builtins
+read: Bash Builtins
+readarray: Bash Builtins
+readonly: Bourne Shell Builtins
+return: Bourne Shell Builtins
+set: The Set Builtin
+shift: Bourne Shell Builtins
+shopt: The Shopt Builtin
+source: Bash Builtins
+suspend: Job Control Builtins
+test: Bourne Shell Builtins
+times: Bourne Shell Builtins
+trap: Bourne Shell Builtins
+type: Bash Builtins
+typeset: Bash Builtins
+ulimit: Bash Builtins
+umask: Bourne Shell Builtins
+unalias: Bash Builtins
+unset: Bourne Shell Builtins
+wait: Job Control Builtins

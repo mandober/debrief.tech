@@ -1,0 +1,220 @@
+# Bash :: Table :: Bash terms
+
+
+
+
+:         | bourne |             | true        |
+.         | bourne |             | source      |
+[         | bourne |             | test        | `/bin/[`
+break     | bourne |             |             |
+cd        | bourne |             |             |
+continue  | bourne |             |             |
+eval      | bourne |             |             |
+exec      | bourne |             |             |
+exit      | bourne |             |             |
+export    | bourne |             |             |
+getopts   | bourne |             |             |
+hash      | bourne |             |             |
+pwd       | bourne |             |             |
+readonly  | bourne |             |             |
+return    | bourne |             |             |
+shift     | bourne |             |             |
+test      | bourne |             | [           |
+times     | bourne |             |             |
+trap      | bourne |             |             |
+umask     | bourne |             |             |
+unset     | bourne |             |             |
+
+bg        |        |             |             |
+bind      |        |             |             |
+builtin   |        |             |             |
+caller    |        |             |             |
+command   |        |             |             |
+compgen   |        |             |             |
+complete  |        |             |             |
+compopt   |        |             |             |
+declare   |        |             |             |
+dirs      |        |             |             |
+disown    |        |             |             |
+echo      |        |             |             |
+enable    |        |             |             |
+false     |        |             |             |
+fc        |        |             |             |
+fg        |        |             |             |
+help      |        |             |             |
+history   |        |             |             |
+jobs      |        |             |             |
+kill      |        |             |             |
+let       |        |             |             |
+local     |        |             |             |
+logout    |        |             |             |
+mapfile   |        |             |             |
+popd      |        |             |             |
+printf    |        |             |             |
+pushd     |        |             |             |
+read      |        |             |             |
+readarray |        |             |             |
+set       |        |             |             |
+shopt     |        |             |             |
+source    |        |             |             |
+suspend   |        |             |             |
+true      |        |             |             |
+type      |        |             |             |
+typeset   |        |             |             |
+ulimit    |        |             |             |
+unalias   |        |             |             |
+wait      |        |             |             |
+
+
+- `!` (configurable) History expansion character
+
+## Index of Shell Reserved Words
+- !         (precommand) Pipeline (negation of exit code)
+- time      (precommand) Pipeline
+- {…}       Command Grouping
+- function  (alt syntax) Shell function definition
+- while     Looping Constructs
+- until     Looping Constructs
+- do        Looping Constructs
+- done      Looping Constructs
+- for       Looping Constructs       `for … in … do … done`
+- in        Conditional Constructs
+- select    Conditional Constructs
+- [[…]]     Conditional Constructs
+- case      Conditional Constructs   `case … esac`
+- esac      Conditional Constructs
+- if        Conditional Constructs   `if … then … [elif … else …] fi`
+- then      Conditional Constructs
+- elif      Conditional Constructs
+- else      Conditional Constructs
+- fi        Conditional Constructs
+
+## Classification of builtins
+
+- .
+- :
+- [
++ alias
+- bg
++ bind
+- break
++ builtin
++ caller
+- cd
++ command
+- compgen
+- complete
+- compopt
+- continue
++ declare
+- dirs
+- disown
++ echo
++ enable
+- eval
+- exec
+- exit
+- export
+- false
+- fc
+- fg
+- getopts
+- hash
++ help
+- history
+- jobs
+- kill
++ let
++ local
++ logout
++ mapfile
+- popd
++ printf
+- pushd
+- pwd
++ read
++ readarray
+- readonly
+- return
+- set
+- shift
+- shopt
++ source
+- suspend
+- test
+- times
+- trap
+- true
++ type
++ typeset
++ ulimit
+- umask
++ unalias
+- unset
+- wait
+
+
+
+## Index of all builtins
+
+- .
+- :
+- [
+- alias
+- bg
+- bind
+- break
+- builtin
+- caller
+- cd
+- command
+- compgen
+- complete
+- compopt
+- continue
+- declare
+- dirs
+- disown
+- echo
+- enable
+- eval
+- exec
+- exit
+- export
+- false
+- fc
+- fg
+- getopts
+- hash
+- help
+- history
+- jobs
+- kill
+- let
+- local
+- logout
+- mapfile
+- popd
+- printf
+- pushd
+- pwd
+- read
+- readarray
+- readonly
+- return
+- set
+- shift
+- shopt
+- source
+- suspend
+- test
+- times
+- trap
+- true
+- type
+- typeset
+- ulimit
+- umask
+- unalias
+- unset
+- wait

@@ -1,0 +1,102 @@
+# Bash :: Builtins :: Table
+
+Special POSIX builtins: `break : . continue eval exec exit export readonly return set shift trap unset`
+
+Legend:
+- Cat[egotry]
+  - bou     Bourne shell builtin
+  - bas     Bash builtin
+  - spb     Special POSIX builtin
+  - ssp     Special shell parameter
+- Type
+  - jobs    Job control
+  - nav     Navigation
+  - comp    Completion
+  - hist    Command-line history
+- Kind
+  - op      Operator
+  - kw      Keyword
+  - bb      Builtin
+  - pr      Program
+  - ev      Environment variable
+  - par     Shell Parameter
+
+
+Name      |Cat| Origin | Purpose        | Desc
+----------|---|--------|----------------|------------------------
+$-        |sp | Bourne | special params | short $SHELLOPTS
+$$        |sp | Bourne | special params | PID
+$#        |sp | Bourne | special params | 
+$!        |sp | Bourne | special params | 
+$?        |sp | Bourne | special params | 
+$@        |sp | Bourne | special params | 
+$*        |sp | Bourne | special params | 
+$_        |sp | bash   | special params | 
+.         |sB | Bourne | lang           | source
+:         |sB | Bourne | lang           | null command, same as 'true'
+[         | B | Bourne | lang           | 
+alias     | B | bash   | lang
+bg        | B | bash   | jobs
+bind      | B | bash   | rl
+break     |sB | Bourne | lang
+builtin   | B | bash   | lang
+caller    | B | bash   | lang
+cd        | B | Bourne | nav
+command   | B | bash   | lang
+compgen   | B | bash   | comp
+complete  | B | bash   | comp
+compopt   | B | bash   | comp
+continue  |spb| Bourne | lang
+declare   | B | bash   | lang
+dirs      | B | bash   | nav
+disown    | B | bash   | jobs
+echo      | B | bash   | lang
+enable    | B | bash   | 
+eval      | B | Bourne | lang
+exec      | B | Bourne | 
+exit      | B | Bourne | lang
+export    | B | Bourne | lang
+fc        | B | bash   | history
+fg        | B | bash   | job control
+getopts   | B | Bourne | param
+hash      | B | Bourne | 
+help      | B | bash   | 
+history   | B | bash   | history
+jobs      | B | bash   | jobs
+kill      | B | bash   | jobs
+let       | B | bash   | lang
+local     | B | bash   | lang
+logout    | B | bash   | 
+mapfile   | B | bash   | lang
+popd      | B | bash   | nav
+printf    | B | bash   | lang
+pushd     | B | bash   | nav
+pwd       | B | Bourne | nav
+read      | B | bash   | lang
+readarray | B | bash   | lang
+readonly  | B | Bourne | var
+return    | B | Bourne | lang
+set       | B | bash   | conf, param;
+shift     | B | Bourne | param
+shopt     | B | bash   | conf
+source    | B | bash   | 
+suspend   | B | bash   | jobs
+test      | B | Bourne | lang
+times     | B | Bourne | 
+trap      | B | Bourne | 
+type      | B | bash   | 
+typeset   | B | bash   | param
+ulimit    | B | bash   | security
+umask     | B | Bourne | security
+unalias   | B | bash   | lang
+unset     | B | Bourne | lang
+wait      | B | bash   | jobs
+
+
+- nav   Directory stack in bash
+- jobs  Job control in bash
+- comp  Programmable completions in bash
+- lang  Bash command language
+
+
+set: un/set shopts and positional parameters, change shell attributes and positional parameters, display shell variables.

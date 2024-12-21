@@ -1,0 +1,1 @@
+https://github.com/rdodesigns/vimrc/blob/master/vimrc

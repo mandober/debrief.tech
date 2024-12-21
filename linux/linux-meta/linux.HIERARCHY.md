@@ -1,0 +1,100 @@
+# Shell :: Hierarchy
+
+- History
+  - Unix history
+  - Linux history
+  - Standards and specs
+
+
+- File system
+- Disk and partition management
+- Linux process model
+- Boot
+- Services
+  - init systems
+    - systemd
+- Networking
+  - ssh
+  - bind
+- Security
+  - SELinux security
+  - PAM
+
+- System components
+  - booting process
+  - init system
+  - tty subsystem
+  - fs
+  - namespaces and cgroups
+  - virtualization
+  - processes
+  - shell
+  - device drivers
+  - terminal interface
+  - package manager
+
+
+Linux Fundamentals
+- Disk and partition management
+- File system
+  - File System Hierarchy
+  - Advanced File System Management
+  - Important directories, files, and Configurations
+  - File management
+  - file descriptors
+  - File I/O
+  - File Sharing
+  - dev fs
+  - proc fs
+- Processes
+  - Linux process model
+  - Process monitoring
+  - Process Environment, Process Control
+  - Process Groups, Sessions, Signals
+  - Dæmon Processes
+  - restricting processes
+- Services
+  - manage services
+  - system services
+  - init system
+  - systemd
+  - samba
+  - mail services
+  - bind
+  - httpd
+  - ssh
+  - dev message bus
+- Networking
+  - firewall
+  - firewalld
+  - ipv6 configuration, kickstart configuration
+  - socket API
+- Security
+  - SELinux security
+- Kernel
+  - mmap
+  - paging
+  - system calls
+  - kernel modules
+  - kernel space
+  - user space
+  - kernel device drivers
+  - namespaces
+  - cgroups
+- IPC
+  - Interprocess Communication
+  - signals, signal handling
+  - interrupts
+  - POSIX Message queues
+  - Semaphores
+- Advanced I/O
+  - Nonblocking I/O
+  - Polling
+  - Record Locking
+- Virtualization
+  - containers
+- Shared Libraries
+- User management
+  - users
+  - groups
+- package management

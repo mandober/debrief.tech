@@ -1,0 +1,70 @@
+# Index :: System calls
+
+Linux kernel has ~300 system calls.
+
+System calls categories
+- Process control
+- File management
+- Device management
+- Information maintenance
+- Communication
+- Protection
+
+System calls
+- Process control
+  - fork
+  - exec: execl execle execlp execv execve execvp; `exec{l,v}{,e,p}`
+  - exit
+  - kill
+  - waitpid
+  - malloc
+  - free
+
+  - brk      adjusting memory allocation on the heap
+  - sbrk     adjusting memory allocation on the heap
+  - malloc   allocating memory on the heap
+  - free     releasing heap memory
+  - alloca   allocating memory on the stack
+
+
+- POSIX prescribed syscalls
+  - File management
+    - open
+    - read
+    - write
+    - close
+  - ioctl
+  - select
+  - poll
+  - sync
+- Linux-only syscalls
+  - futex (fast userspace mutex)
+  - epoll
+  - splice
+  - dnotify, fanotify, inotify; `{d,fa,i}notify`
+  - readahead
+  - getrandom
+  - sigreturn
+
+
+## Alphabetical list
+
+chdir
+chmod
+close
+execve
+exit
+fork
+kill
+link
+lseek
+mkdir
+mount
+open
+read
+rmdir
+stat
+time
+umount
+waitpid
+write

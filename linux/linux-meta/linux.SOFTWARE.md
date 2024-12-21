@@ -1,0 +1,68 @@
+# Shell :: Software :: Hierarchy
+
+- CLI software
+  - Essental CLI software
+    - Shell
+      - bash
+      - zsh
+    - Command line editing
+      - readline
+    - Package management
+      - apt
+      - nix
+      - pacman
+      - scoop
+    - Utility suites
+      - coreutils
+      - binutils
+      - adminutils
+      - sysutils
+  - Auxillary CLI software
+    - Globbing config
+      - set, shopt, rl
+    - Terminal settings
+      - stty
+    - Completion management
+      - bash_completions
+    - Locale management
+      - LC_xxx envars
+    - PATH management
+      - user-script
+    - History management
+      - bash hub
+      - hstr
+    - Prompt management
+      - powerline
+    - Env management
+      - .env
+    - Navigation
+      - fzf
+    - Version management
+      - git
+      - gh
+    - Shell Frameworks
+      - Bash Frameworks
+        - bashit
+        - oobash
+        - basher
+      - Zsh Frameworks
+        - oh my zsh
+        - presto
+    - Code Editors
+      - vim
+        - vim plugins
+      - emacs
+        - emacs modes
+    - Searching
+      - grep
+      - ripgrep
+    - Info
+      - Get usage tips for commands
+        - tl/dr
+        - cheat.sh
+        - bro pages
+      - xiki shell
+    - Shell tools
+      - iselect
+      - fuck
+      - command-line productivity?

@@ -1,0 +1,501 @@
+# Overview of options
+
+https://vimhelp.org/quickref.txt.html#option-list
+
+Short explanation of each option (427 options)
+
+Option categories
+- β   buffer
+- ε   encoding
+- 𝒞   cscope
+- κ   completion
+- γ   gui
+- Δ   diff
+- δ   display, highlight, show, message
+- ι   indent
+- ω   window
+- ϻ   mouse
+- Σ   search
+- š   shell
+- ς   spell
+- ↓   scroll
+- τ   terminal
+- Ͳ   tags
+- →   tab
+- φ   fold
+- χ   help
+- »   command-line
+- μ   mappings, keys
+- π   print
+- λ   lang, library: Lisp, Lua, MzScheme, nroff, make, Perl, Python, Ruby, tlc
+- ϴ   file ops: read, write, undo, modify, update, patch, paste
+
+
+ʞ ɰ ɯ
+λ η α ζ π ν Ξ ξ ρ υ Ψ Ω Φ Σ Ξ χ ψ ω
+Ϸ Ϟ ϖ ϵ ϶ ϝ Ϝ ϐ ϑ ϴ ϰ ϻ
+Ϙ ͷ ϸ ϱ Ͼ ϙ ϟ Ϡ ϡ
+⨍
+⨞ ⨠ ⨟ ⨾ ∀ ∃ ∏ ≫ ⋙
+⦁
+◌ ⇅ ↲ ↹ ↻ ↶ ↷ ↩ ↯ • ° ‣ 
+§ ¶ º ⁋ ♪ ± ⁒ ‡ ¬ † ⁕ »
+
+## My categorization of options (column `C`)
+backup
+baloon
+cindent
+command-line
+cscope
+debug
+encryption
+error
+fileformat
+formatting
+help
+keys
+maximum memory
+modeline
+mouse
+swap
+wrap
+
+
+## Vim categorization of options (column `v`)
+
+- 1. important
+- 2. moving around, searching and patterns
+- 3. tags
+- 4. displaying text
+- 5. syntax, highlighting and spelling
+- 6. multiple windows
+- 7. multiple tab pages
+- 8. terminal
+- 9. using the mouse
+- 10. printing
+- 11. messages and info
+- 12. selecting text
+- 13. editing text
+- 14. tabs and indenting
+- 15. folding
+- 16. diff mode
+- 17. mapping
+- 18. reading and writing files
+- 19. the swap file
+- 20. command line editing
+- 21. executing external commands
+- 22. running make and jumping to errors (quickfix)
+- 23. language specific
+- 24. multi-byte characters
+- 25. various
+
+option          | short |t|v|3|C| desc
+----------------|-------|-|-|-|-|-----------------------------------------------
+aleph           | al    | | | |ε| ASCII code of the letter Aleph
+allowrevins     | ari   | | | | | allow `c-_` in Insert and Command-line mode
+ambiwidth       | ambw  | | | |ε| what to do with Unicode chars of ambiguous width
+autochdir       | acd   | | | |š| cd to the file in current window
+autoindent      | ai    | | | |ι| infer indent for new line from previous line
+autoread        | ar    | | | |ϴ| autom. read file when changed outside of Vim
+autoshelldir    | asd   | | | |š| cd to cwd of the shell
+autowrite       | aw    | | | |ϴ| autom. write file if changed
+autowriteall    | awa   | | | |ϴ| like autowrite, but works with more commands
+background      | bg    | | | |δ| "dark" or "light", used as highlight color hint
+backspace       | bs    | | | | | how backspace works at start of line
+backup          | bk    | | | |ϴ| keep backup file after overwriting a file
+backupcopy      | bkc   | | | |ϴ| make backup as a copy, do not rename the file
+backupdir       | bdir  | | | |ϴ| list of dirs for backup file
+backupext       | bex   | | | |ϴ| extension used for the backup file
+backupskip      | bsk   | | | |ϴ| no backup for files that match these patterns
+balloondelay    | bdlay | | | | | delay in ms before a balloon may pop up
+ballooneval     | beval | | | |γ| switch on balloon evaluation in the GUI
+balloonevalterm |       | | | |τ| switch on balloon evaluation in terminal
+balloonexpr     | bexpr | | | | | expression to show in balloon
+belloff         | bo    | | | | | do not ring the bell for these reasons
+binary          | bin   | | | |ϴ| read/write/edit file in binary mode
+bomb            |       | | | |ε| prepend a Byte Order Mark to the file
+breakat         | brk   | | | | | characters that may cause a line break
+breakindent     | bri   | | | |ι| wrapped line repeats indent
+breakindentopt  | briopt| | | |ι| settings for breakindent
+browsedir       | bsdir | | | |š| which directory to start browsing in
+bufhidden       | bh    | | | |β| what to do when buffer is no longer in window
+buflisted       | bl    | | | |β| whether the buffer shows up in the buffer list
+buftype         | bt    | | | |β| special type of buffer
+casemap         | cmp   | | | | | specifies how case of letters is changed
+cdhome          | cdh   | | | |š| cd to the home directory by ":cd"
+cdpath          | cd    | | | |š| list of directories searched with ":cd"
+cedit           |       | | | |μ| key used to open the command-line window
+charconvert     | ccv   | | | |ε| expression for character encoding conversion
+cindent         | cin   | | | |ι| do C program indenting
+cinkeys         | cink  | | | |ι| keys that trigger indent when cindent is set
+cinoptions      | cino  | | | |ι| how to do indenting when cindent is set
+cinscopedecls   | cinsd | | | | | words that are recognized by cino-g
+cinwords        | cinw  | | | |ι| words where si and cin add an indent
+clipboard       | cb    | | | | | use the clipboard as the unnamed register
+cmdheight       | ch    | | | |»| number of lines to use for the command-line
+cmdwinheight    | cwh   | | | |»| height of the command-line window
+colorcolumn     | cc    | | | |δ| columns to highlight
+columns         | co    | | | |δ| number of columns in the display
+comments        | com   | | | | | patterns that can start a comment line
+commentstring   | cms   | | | |φ| template for comments; used for fold marker
+compatible      | cp    | | | |ϴ| behave Vi-compatible as much as possible
+complete        | cpt   | | | |κ| specify how Insert mode completion works
+completefunc    | cfu   | | | |κ| function to be used for Insert mode completion
+completeopt     | cot   | | | |κ| options for Insert mode completion
+completepopup   | cpp   | | | |κ| options for the Insert mode completion info popup
+completeslash   | csl   | | | |κ| like shellslash for completion
+concealcursor   | cocu  | | | |δ| whether concealable text is hidden in cursor line
+conceallevel    | cole  | | | |δ| whether concealable text is shown or hidden
+confirm         | cf    | | | |ϴ| ask what to do about unsaved/read-only files
+copyindent      | ci    | | | |ι| make autoindent use existing indent structure
+cpoptions       | cpo   | | | |ϴ| flags for Vi-compatible behavior
+cryptmethod     | cm    | | | |ϴ| type of encryption to use for file writing
+cscopepathcomp  | cspc  | | | |𝒞| how many components of the path to show
+cscopeprg       | csprg | | | |𝒞| command to execute cscope
+cscopequickfix  | csqf  | | | |𝒞| use quickfix window for cscope results
+cscoperelative  | csre  | | | |𝒞| Use cscope.out path basename as prefix
+cscopetag       | cst   | | | |𝒞| use cscope for tag commands
+cscopetagorder  | csto  | | | |𝒞| determines ":cstag" search order
+cscopeverbose   | csverb| | | |𝒞| give messages when adding a cscope database
+cursorbind      | crb   | | | |ω| move cursor in window as it moves in other windows
+cursorcolumn    | cuc   | | | |δ| highlight the screen column of the cursor
+cursorline      | cul   | | | |δ| highlight the screen line of the cursor
+cursorlineopt   | culopt| | | |δ| settings for cursorline
+debug           |       | | | |δ| set to "msg" to see all error messages
+define          | def   | | | |Σ| pattern to be used to find a macro definition
+delcombine      | deco  | | | |ε| delete combining characters on their own
+dictionary      | dict  | | | |κ| list of file names used for keyword completion
+diff            |       | | | |Δ| use diff mode for the current window
+diffexpr        | dex   | | | |Δ| expression used to obtain a diff file
+diffopt         | dip   | | | |Δ| options for using diff mode
+digraph         | dg    | | | |Σ| enable entering digraphs in Insert mode
+directory       | dir   | | | |ϴ| list of directory names for swap files
+display         | dy    | | | |δ| list of flags for how to display text
+eadirection     | ead   | | | |ω| in which direction equalalways works
+edcompatible    | ed    | | | |Σ| toggle flags of ":substitute" command
+emoji           | emo   | | | |ε| emoji characters are considered full width
+encoding        | enc   | | | |ε| encoding used internally
+endoffile       | eof   | | | | | write CTRL-Z at end of the file
+endofline       | eol   | | | | | write <EOL> for last line in file
+equalalways     | ea    | | | |ω| windows are automatically made the same size
+equalprg        | ep    | | | | | external program to use for "=" command
+errorbells      | eb    | | | | | ring the bell for error messages
+errorfile       | ef    | | | |ϴ| name of the errorfile for the QuickFix mode
+errorformat     | efm   | | | |ϴ| description of the lines in the error file
+esckeys         | ek    | | | |μ| recognize function keys in Insert mode
+eventignore     | ei    | | | | | autocommand events that are ignored
+expandtab       | et    | | | |→| use spaces when <Tab> is inserted
+exrc            | ex    | | | |ϴ| read .vimrc and .exrc in the current directory
+fileencoding    | fenc  | | | |ε| file encoding for multibyte text
+fileencodings   | fencs | | | |ε| automatically detected character encodings
+fileformat      | ff    | | | | | file format used for file I/O
+fileformats     | ffs   | | | | | automatically detected values for fileformat
+fileignorecase  | fic   | | | | | ignore case when using file names
+filetype        | ft    | | | | | type of file, used for autocommands
+fillchars       | fcs   | | | |δ| characters to use for displaying special items
+fixendofline    | fixeol| | | | | make sure last line in file has <EOL>
+foldclose       | fcl   | | | |φ| close a fold when the cursor leaves it
+foldcolumn      | fdc   | | | |φ| width of the column used to indicate folds
+foldenable      | fen   | | | |φ| set to display all folds open
+foldexpr        | fde   | | | |φ| expression used when foldmethod is "expr"
+foldignore      | fdi   | | | |φ| ignore lines when foldmethod is "indent"
+foldlevel       | fdl   | | | |φ| close folds with a level higher than this
+foldlevelstart  | fdls  | | | |φ| foldlevel when starting to edit a file
+foldmarker      | fmr   | | | |φ| markers used when foldmethod is "marker"
+foldmethod      | fdm   | | | |φ| folding type
+foldminlines    | fml   | | | |φ| minimum number of lines for a fold to be closed
+foldnestmax     | fdn   | | | |φ| maximum fold depth
+foldopen        | fdo   | | | |φ| for which commands a fold will be opened
+foldtext        | fdt   | | | |φ| expression used to display for a closed fold
+formatexpr      | fex   | | | | | expression used with `gq` command
+formatlistpat   | flp   | | | | | pattern used to recognize a list header
+formatoptions   | fo    | | | | | how automatic formatting is to be done
+formatprg       | fp    | | | | | name of external program used with `gq` command
+fsync           | fs    | | | |ϴ| whether to invoke fsync() after file write
+gdefault        | gd    | | | | | the ":substitute" flag `g` is default on
+grepformat      | gfm   | | | |Σ| format of grepprg output
+grepprg         | gp    | | | |Σ| program to use for ":grep"
+guicursor       | gcr   | | | |γ| GUI: settings for cursor shape and blinking
+guifont         | gfn   | | | |γ| GUI: Name(s) of font(s) to be used
+guifontset      | gfs   | | | |γ| GUI: Names of multibyte fonts to be used
+guifontwide     | gfw   | | | |γ| list of font names for double-wide characters
+guiheadroom     | ghr   | | | |γ| GUI: pixels room for window decorations
+guiligatures    | gli   | | | |γ| GTK GUI: ASCII characters that can form shapes
+guioptions      | go    | | | |γ| GUI: Which components and options are used
+guipty          |       | | | |γ| GUI: try to use a pseudo-tty for ":!" commands
+guitablabel     | gtl   | | | |γ| GUI: custom label for a tab page
+guitabtooltip   | gtt   | | | |γ| GUI: custom tooltip for a tab page
+helpfile        | hf    | | | |χ| full path name of the main help file
+helpheight      | hh    | | | |χ| minimum height of a new help window
+helplang        | hlg   | | | |χ| preferred help languages
+hidden          | hid   | | | |β| dont unload buffer when it is abandoned
+highlight       | hl    | | | |δ| sets highlighting mode for various occasions
+history         | hi    | | | |»| number of command-lines that are remembered
+hlsearch        | hls   | | | |Σ| highlight matches with last search pattern
+icon            |       | | | |δ| let Vim set the text of the window icon
+iconstring      |       | | | |δ| string to use for the Vim icon text
+ignorecase      | ic    | | | |Σ| ignore case in search patterns
+imactivatefunc  | imaf  | | | |μ| function to enable/disable the X input method
+imactivatekey   | imak  | | | |μ| key that activates the X input method
+imcmdline       | imc   | | | |μ| use IM when starting to edit a command line
+imdisable       | imd   | | | |μ| do not use the IM in any mode
+iminsert        | imi   | | | |μ| use :lmap or IM in Insert mode
+imsearch        | ims   | | | |Σ| use :lmap or IM when typing a search pattern
+imstatusfunc    | imsf  | | | |μ| function to obtain X input method status
+imstyle         | imst  | | | |μ| specifies the input style of the input method
+include         | inc   | | | |Σ| pattern to be used to find an include file
+includeexpr     | inex  | | | |Σ| expression used to process an include line
+incsearch       | is    | | | |Σ| highlight match while typing search pattern
+indentexpr      | inde  | | | |ι| expression used to obtain the indent of a line
+indentkeys      | indk  | | | |ι| keys that trigger indenting with indentexpr
+infercase       | inf   | | | |κ| adjust case of match for keyword completion
+insertmode      | im    | | | |μ| start the edit of a file in Insert mode
+isfname         | isf   | | | |ε| characters included in file names and pathnames
+isident         | isi   | | | |ε| characters included in identifiers
+iskeyword       | isk   | | | |ε| characters included in keywords
+isprint         | isp   | | | |ε| printable characters
+joinspaces      | js    | | | | | two spaces after a period with a join command
+jumpoptions     | jop   | | | | | specifies how jumping is done
+key             |       | | | |ϴ| encryption key
+keymap          | kmp   | | | |μ| name of a keyboard mapping
+keymodel        | km    | | | |μ| enable starting/stopping selection with keys
+keyprotocol     | kpc   | | | |τ| what keyboard protocol to use for what terminal
+keywordprg      | kp    | | | |χ| program to use for the "K" command
+langmap         | lmap  | | | |λ| alphabetic characters for other language mode
+langmenu        | lm    | | | |λ| language to be used for the menus
+langnoremap     | lnr   | | | |λ| do not apply langmap to mapped characters
+langremap       | lrm   | | | |λ| do apply langmap to mapped characters
+laststatus      | ls    | | | |δ| tells when last window has status lines
+lazyredraw      | lz    | | | |δ| do not redraw while executing macros
+linebreak       | lbr   | | | | | wrap long lines at a blank
+lines           |       | | | |δ| number of lines in the display
+linespace       | lsp   | | | | | number of pixel lines to use between characters
+lisp            |       | | | |λ| automatic indenting for Lisp
+lispoptions     | lop   | | | |λ| changes how Lisp indenting is done
+lispwords       | lw    | | | |λ| words that change how lisp indenting works
+list            |       | | | |δ| show <Tab> and <EOL>
+listchars       | lcs   | | | |δ| characters for displaying in list mode
+loadplugins     | lpl   | | | |ϴ| load plugin scripts when starting up
+luadll          |       | | | |λ| name of the Lua dynamic library
+magic           |       | | | |Σ| changes special characters in search patterns
+makeef          | mef   | | | |λ| name of the errorfile for ":make"
+makeencoding    | menc  | | | |ε| encoding of external make/grep commands
+makeprg         | mp    | | | |λ| program to use for the ":make" command
+matchpairs      | mps   | | | |Σ| pairs of characters that "%" can match
+matchtime       | mat   | | | |δ| tenths of a second to show matching paren
+maxcombine      | mco   | | | |ε| maximum nr of combining characters displayed
+maxfuncdepth    | mfd   | | | |λ| maximum recursive depth for user functions
+maxmapdepth     | mmd   | | | |μ| maximum recursive depth for mapping
+maxmem          | mm    | | | |β| maximum memory (in Kbyte) used for one buffer
+maxmempattern   | mmp   | | | |Σ| maximum memory (in Kbyte) used for pattern search
+maxmemtot       | mmt   | | | |β| maximum memory (in Kbyte) used for all buffers
+menuitems       | mis   | | | |δ| maximum number of items in a menu
+mkspellmem      | msm   | | | |ς| memory used before :mkspell compresses the tree
+modeline        | ml    | | | | | recognize modelines at start or end of file
+modelineexpr    | mle   | | | | | allow setting expression options from a modeline
+modelines       | mls   | | | | | number of lines checked for modelines
+modifiable      | ma    | | | |ϴ| changes to the text are not possible
+modified        | mod   | | | |ϴ| buffer has been modified
+more            |       | | | |δ| pause listings when the whole screen is filled
+mouse           |       | | | |ϻ| enable the use of mouse clicks
+mousefocus      | mousef| | | |ϻ| keyboard focus follows the mouse
+mousehide       | mh    | | | |ϻ| hide mouse pointer while typing
+mousemodel      | mousem| | | |ϻ| changes meaning of mouse buttons
+mousemoveevent  |       | | | |ϻ| report mouse moves with <MouseMove>
+mouseshape      | mouses| | | |ϻ| shape of the mouse pointer in different modes
+mousetime       | mouset| | | |ϻ| max time between mouse double-click
+mzquantum       | mzq   | | | |λ| the interval between polls for MzScheme threads
+mzschemedll     |       | | | |λ| name of the MzScheme dynamic library
+mzschemegcdll   |       | | | |λ| name of the MzScheme dynamic library for GC
+nrformats       | nf    | | | | | number formats recognized for CTRL-A command
+number          | nu    | | | |δ| line numbers
+numberwidth     | nuw   | | | |δ| number of columns used for the line number
+omnifunc        | ofu   | | | |κ| function for filetype-specific completion
+opendevice      | odev  | | | |ϴ| allow reading/writing devices on MS-Windows
+operatorfunc    | opfunc| | | |μ| function to be called for `g@` operator
+packpath        | pp    | | | |ϴ| list of directories used for packages
+paragraphs      | para  | | | |λ| nroff macros that separate paragraphs
+paste           |       | | | |ϴ| allow pasting text
+pastetoggle     | pt    | | | |μ| key code that causes paste to toggle
+patchexpr       | pex   | | | |ϴ| expression used to patch a file
+patchmode       | pm    | | | |ϴ| keep the oldest version of a file
+path            | pa    | | | |Σ| list of directories searched with "gf" et.al.
+perldll         |       | | | |λ| name of the Perl dynamic library
+preserveindent  | pi    | | | |ι| preserve the indent structure when reindenting
+previewheight   | pvh   | | | |ω| height of the preview window
+previewpopup    | pvp   | | | |ω| use popup window for preview
+previewwindow   | pvw   | | | |ω| identifies the preview window
+printencoding   | penc  | | | |ε| encoding to be used for printing
+printdevice     | pdev  | | | |π| name of the printer to be used for :hardcopy
+printexpr       | pexpr | | | |π| expression used to print PostScript for :hardcopy
+printfont       | pfn   | | | |π| name of the font to be used for :hardcopy
+printheader     |       | | | |π| format of the header used for :hardcopy
+printmbcharset  | pmbcs | | | |π| CJK character set to be used for :hardcopy
+printmbfont     | pmbfn | | | |π| font names to be used for CJK output of :hardcopy
+printoptions    | popt  | | | |π| controls the format of :hardcopy output
+prompt          | prompt| | | |δ| enable prompt in Ex mode
+pumheight       | ph    | | | |δ| maximum height of the popup menu
+pumwidth        | pw    | | | |δ| minimum width of the popup menu
+pythondll       |       | | | |λ| name of the Python 2 dynamic library
+pythonhome      |       | | | |λ| name of the Python 2 home directory
+pythonthreedll  |       | | | |λ| name of the Python 3 dynamic library
+pythonthreehome |       | | | |λ| name of the Python 3 home directory
+pyxversion      | pyx   | | | |λ| Python version used for pyx* commands
+quickfixtextfunc| qftf  | | | |ω| function for the text in the quickfix window
+quoteescape     | qe    | | | |ε| escape characters used in a string
+readonly        | ro    | | | |β| disallow writing the buffer
+redrawtime      | rdt   | | | |Σ| timeout for hlsearch and :match highlighting
+regexpengine    | re    | | | |Σ| default regexp engine to use
+relativenumber  | rnu   | | | |δ| show relative line number in front of each line
+remap           |       | | | |μ| allow mappings to work recursively
+renderoptions   | rop   | | | |δ| options for text rendering on Windows
+report          |       | | | |ϴ| threshold for reporting nr of lines changed
+restorescreen   | rs    | | | |δ| Win32: restore screen when exiting
+revins          | ri    | | | |ε| inserting characters will work backwards
+rightleft       | rl    | | | |ε| window is right-to-left oriented
+rightleftcmd    | rlc   | | | |ε| commands for which editing works right-to-left
+rubydll         |       | | | |λ| name of the Ruby dynamic library
+ruler           | ru    | | | |δ| show cursor line and column in the status line
+rulerformat     | ruf   | | | |δ| custom format for the ruler
+runtimepath     | rtp   | | | |ϴ| list of directories used for runtime files
+scroll          | scr   | | | |↓| lines to scroll with CTRL-U and CTRL-D
+scrollbind      | scb   | | | |↓| scroll in window as other windows scroll
+scrollfocus     | scf   | | | |↓| scroll wheel applies to window under pointer
+scrolljump      | sj    | | | |↓| minimum number of lines to scroll
+scrolloff       | so    | | | |↓| minimum nr. of lines above and below cursor
+scrollopt       | sbo   | | | |↓| how scrollbind should behave
+sections        | sect  | | | |λ| nroff macros that separate sections
+secure          |       | | | |ϴ| secure mode for reading .vimrc in current dir
+selection       | sel   | | | | | what type of selection to use
+selectmode      | slm   | | | | | when to use Select mode instead of Visual mode
+sessionoptions  | ssop  | | | |ϴ| options for :mksession
+shell           | sh    | | | |š| name of shell to use for external commands
+shellcmdflag    | shcf  | | | |š| flag to shell to execute one command
+shellpipe       | sp    | | | |š| string to put output of ":make" in error file
+shellquote      | shq   | | | |š| quote character(s) for around shell command
+shellredir      | srr   | | | |š| string to put output of filter in a temp file
+shellslash      | ssl   | | | |š| use forward slash for shell file names
+shelltemp       | stmp  | | | |š| whether to use a temp file for shell commands
+shelltype       | st    | | | |š| Amiga: influences how to use a shell
+shellxescape    | sxe   | | | |š| characters to escape when shellxquote is `(`
+shellxquote     | sxq   | | | |š| like shellquote, but include redirection
+shiftround      | sr    | | | |→| round indent to multiple of shiftwidth
+shiftwidth      | sw    | | | |→| number of spaces to use for (auto)indent step
+shortmess       | shm   | | | |δ| list of flags, reduce length of messages
+shortname       | sn    | | | |δ| Filenames assumed to be 8.3 chars
+showbreak       | sbr   | | | |δ| string to use at the start of wrapped lines
+showcmd         | sc    | | | |δ| show (partial) command somewhere
+showcmdloc      | sloc  | | | |δ| where to show (partial) command
+showfulltag     | sft   | | | |Ͳ| show full tag pattern when completing tag
+showmatch       | sm    | | | |δ| briefly jump to matching bracket if insert one
+showmode        | smd   | | | |δ| message on status line to show current mode
+showtabline     | stal  | | | |→| tells when the tab pages line is displayed
+sidescroll      | ss    | | | |↓| minimum number of columns to scroll horizontal
+sidescrolloff   | siso  | | | |↓| min nr of columns to left and right of cursor
+signcolumn      | scl   | | | |δ| when to display the sign column
+smartcase       | scs   | | | |Σ| no ignore case when pattern has uppercase
+smartindent     | si    | | | |ι| smart autoindenting for C programs
+smarttab        | sta   | | | |→| use shiftwidth when inserting <Tab>
+smoothscroll    | sms   | | | |↓| scroll by screen lines when wrap is set
+softtabstop     | sts   | | | |→| number of spaces that <Tab> uses while editing
+spell           |       | | | |ς| enable spell checking
+spellcapcheck   | spc   | | | |ς| pattern to locate end of a sentence
+spellfile       | spf   | | | |ς| spell: files where `zg` and `zw` store words
+spelllang       | spl   | | | |ς| language(s) to do spell checking for
+spelloptions    | spo   | | | |ς| options for spell checking
+spellsuggest    | sps   | | | |ς| method(s) used to suggest spelling corrections
+splitbelow      | sb    | | | |ω| new window from split is below the current one
+splitkeep       | spk   | | | |↓| determines scroll behavior for split windows
+splitright      | spr   | | | |ω| new window is put right of the current one
+startofline     | sol   | | | |μ| commands move cursor to first non-blank in line
+statusline      | stl   | | | |δ| custom format for the status line
+suffixes        | su    | | | |Σ| suffixes that are ignored with multiple match
+suffixesadd     | sua   | | | |Σ| suffixes added when searching for a file
+swapfile        | swf   | | | |β| whether to use a swapfile for a buffer
+swapsync        | sws   | | | |ϴ| how to sync the swap file
+switchbuf       | swb   | | | |β| sets behavior when switching to another buffer
+synmaxcol       | smc   | | | | | maximum column to find syntax items
+syntax          | syn   | | | |β| syntax to be loaded for current buffer
+tabline         | tal   | | | | | custom format for the console tab pages line
+tabpagemax      | tpm   | | | | | maximum number of tab pages for -p and "tab all"
+tabstop         | ts    | | | |→| number of spaces that <Tab> in file uses
+tagbsearch      | tbs   | | | |Ͳ| use binary searching in tags files
+tagcase         | tc    | | | |Ͳ| how to handle case when searching in tags files
+tagfunc         | tfu   | | | |Ͳ| function to get list of tag matches
+taglength       | tl    | | | |Ͳ| number of significant characters for a tag
+tagrelative     | tr    | | | |Ͳ| file names in tag file are relative
+tags            | tag   | | | |Ͳ| list of file names used by the tag command
+tagstack        | tgst  | | | |Ͳ| push tags onto the tag stack
+tcldll          |       | | | |λ| name of the Tcl dynamic library
+term            |       | | | |τ| name of the terminal
+termbidi        | tbidi | | | |τ| terminal takes care of bi-directionality
+termencoding    | tenc  | | | |ε| character encoding used by the terminal
+termguicolors   | tgc   | | | |δ| use GUI colors for the terminal
+termwinkey      | twk   | | | |τ| key that precedes a Vim command in a terminal
+termwinscroll   | twsl  | | | |τ| max number of scrollback lines in a terminal window
+termwinsize     | tws   | | | |τ| size of a terminal window
+termwintype     | twt   | | | |τ| MS-Windows: type of pty to use for terminal window
+terse           |       | | | |δ| shorten some messages
+textwidth       | tw    | | | | | maximum width of text that is being inserted
+thesaurus       | tsr   | | | |κ| list of thesaurus files for keyword completion
+thesaurusfunc   | tsrfu | | | |κ| function to be used for thesaurus completion
+tildeop         | top   | | | |μ| tilde command "~" behaves like an operator
+timeout         | to    | | | |μ| timeout on mappings and key codes
+timeoutlen      | tm    | | | |μ| timeout time in ms
+title           |       | | | |ω| let Vim set the title of the window
+titlelen        |       | | | |ω| percentage of columns used for window title
+titleold        |       | | | |ω| old title, restored when exiting
+titlestring     |       | | | |ω| string to use for the Vim window title
+toolbar         | tb    | | | |γ| GUI: which items to show in the toolbar
+toolbariconsize | tbis  | | | |δ| size of the toolbar icons (for GTK 2 only)
+ttimeout        |       | | | |μ| timeout on mappings
+ttimeoutlen     | ttm   | | | |μ| timeout for key codes in ms
+ttybuiltin      | tbi   | | | |τ| use built-in termcap before external termcap
+ttyfast         | tf    | | | |τ| indicates a fast terminal connection
+ttymouse        | ttym  | | | |ϻ| type of mouse codes generated
+ttyscroll       | tsl   | | | |↓| max number of lines for a scroll
+ttytype         | tty   | | | |τ| alias for term
+undodir         | udir  | | | |ϴ| where to store undo files
+undofile        | udf   | | | |ϴ| save undo information in a file
+undolevels      | ul    | | | |ϴ| max number of changes that can be undone
+undoreload      | ur    | | | |β| max nr of lines to save for undo on buffer reload
+updatecount     | uc    | | | |ϴ| after this many characters flush swap file
+updatetime      | ut    | | | |ϴ| after this many ms flush swap file
+varsofttabstop  | vsts  | | | |→| list of number of spaces when typing <Tab>
+vartabstop      | vts   | | | |→| list of number of spaces for <Tab>s
+verbose         | vbs   | | | |δ| give informative messages
+verbosefile     | vfile | | | |δ| file to write messages in
+viewdir         | vdir  | | | |φ| directory where to store files with `:mkview`
+viewoptions     | vop   | | | |φ| specifies what to save for `:mkview`
+viminfo         | vi    | | | |ϴ| use `.viminfo` file upon startup and exiting
+viminfofile     | vif   | | | |ϴ| file name used for the viminfo file
+virtualedit     | ve    | | | | | when to use virtual editing
+visualbell      | vb    | | | |δ| use visual bell instead of beeping
+warn            |       | | | |β| warn for shell command when buffer was changed
+weirdinvert     | wiv   | | | |τ| for terminals that have weird inversion method
+whichwrap       | ww    | | | | | allow specified keys to cross line boundaries
+wildchar        | wc    | | | |»| command-line character for wildcard expansion
+wildcharm       | wcm   | | | |»| like wildchar but also works when mapped
+wildignore      | wig   | | | |κ| files matching these patterns are not completed
+wildignorecase  | wic   | | | |κ| ignore case when completing file names
+wildmenu        | wmnu  | | | |κ| use menu for command line completion
+wildmode        | wim   | | | |κ| mode for wildchar command-line expansion
+wildoptions     | wop   | | | |κ| specifies how command line completion is done
+winaltkeys      | wak   | | | |μ| when the windows system handles ALT keys
+wincolor        | wcr   | | | |δ| window-local highlighting
+window          | wi    | | | |↓| nr of lines to scroll for CTRL-F and CTRL-B
+winfixheight    | wfh   | | | |ω| keep window height when opening/closing windows
+winfixwidth     | wfw   | | | |ω| keep window width when opening/closing windows
+winheight       | wh    | | | |ω| minimum number of lines for the current window
+winminheight    | wmh   | | | |ω| minimum number of lines for any window
+winminwidth     | wmw   | | | |ω| minimal number of columns for any window
+winptydll       |       | | | |λ| name of the winpty dynamic library
+winwidth        | wiw   | | | |ω| minimal number of columns for current window
+wrap            | long  | | | | | lines wrap and continue on the next line
+wrapmargin      | wm    | | | | | chars from the right where wrapping starts
+wrapscan        | ws    | | | |Σ| searches wrap around the end of the file
+write           |       | | | |ϴ| writing to a file is allowed
+writeany        | wa    | | | |ϴ| write to file with no need for "!" override
+writebackup     | wb    | | | |ϴ| make a backup before overwriting a file
+writedelay      | wd    | | | |ϴ| delay this many ms for each char (for debug)
+xtermcodes      |       | | | |τ| request terminal codes from an xterm

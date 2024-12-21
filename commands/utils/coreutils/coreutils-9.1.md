@@ -1,0 +1,563 @@
+# Coreutils
+
+* GNU Coreutils
+This manual documents version 9.5 of the GNU core utilities, including the standard programs for text and file manipulation.
+
+* GNU Coreutils 9.1
+https://www.gnu.org/software/coreutils/manual/html_node/index.html
+
+## Brief contents
+
+- 1. Introduction
+- 2. Common options
+- 3. Output of entire files
+- 4. Formatting file contents
+- 5. Output of parts of files
+- 6. Summarizing files
+- 7. Operating on sorted files
+- 8. Operating on fields
+- 9. Operating on characters
+- 10. Directory listing
+- 11. Basic operations
+- 12. Special file types
+- 13. Changing file attributes
+- 14. File space usage
+- 15. Printing text
+- 16. Conditions
+- 17. Redirection
+- 18. File name manipulation
+- 19. Working context
+- 20. User information
+- 21. System context
+- 22. SELinux context
+- 23. Modified command invocation
+- 24. Process control
+- 25. Delaying
+- 26. Numeric operations
+- 27. File permissions
+- 28. File timestamps
+- 29. Date input formats
+- 30. Version sort ordering
+- 31. Opening the Software Toolbox
+
+
+## Table of Contents
+
+- Coreutils 9.1
+  - 1. Introduction
+  - 2. Common options
+    - 2.1 Exit status
+    - 2.2 Backup options
+    - 2.3 Block size
+    - 2.4 Floating point numbers
+    - 2.5 Signal specifications
+    - 2.6 Disambiguating user names and IDs: chown, chgrp, chroot, id
+    - 2.7 Sources of random data
+    - 2.8 Target directory
+    - 2.9 Trailing slashes
+    - 2.10 Traversing symlinks
+    - 2.11 Treating the forward slash (`/`) specially
+    - 2.12 Special builtin utilities
+    - 2.13 Standards conformance
+    - 2.14 coreutils: Multi-call program
+  - 3. Output of entire files
+    - 3.1 `cat`: Concatenate and write files
+    - 3.2 `tac`: Concatenate and write files in reverse
+    - 3.3 `nl`: Number lines and write files
+    - 3.4 `od`: Write files in octal or other formats
+    - 3.5 `base32`: Transform data into printable data
+    - 3.6 `base64`: Transform data into printable data
+    - 3.7 `basenc`: Transform data into printable data
+  - 4. Formatting file contents
+    - 4.1 `fmt`: Reformat paragraph text
+    - 4.2 `pr`: Paginate or columnate files for printing
+    - 4.3 `fold`: Wrap input lines to fit in specified width
+  - 5. Output of parts of files
+    - 5.1 `head`: Output the first part of files
+    - 5.2 `tail`: Output the last part of files
+    - 5.3 `split`: Split a file into pieces.
+    - 5.4 `csplit`: Split a file into context-determined pieces
+  - 6. Summarizing files
+    - 6.1 `wc`: Print newline, word, and byte counts
+    - 6.2 `sum`: Print checksum and block counts
+    - 6.3 `cksum`: Print and verify file checksums
+    - 6.4 `b2sum`: Print or check BLAKE2 digests
+    - 6.5 `md5sum`: Print or check MD5 digests
+    - 6.6 `sha1sum`: Print or check SHA-1 digests
+    - 6.7 `sha2` utilities: Print or check SHA-2 digests
+  - 7. Operating on sorted files
+    - 7.1 `sort`: Sort text files
+    - 7.2 `shuf`: Shuffling text
+    - 7.3 `uniq`: Uniquify files
+    - 7.4 `comm`: Compare two sorted files line by line
+    - 7.5 `ptx`: Produce permuted indexes
+      - 7.5.1 General options
+      - 7.5.2 Charset selection
+      - 7.5.3 Word selection and input processing
+      - 7.5.4 Output formatting
+      - 7.5.5 The GNU extensions to ptx
+    - 7.6 `tsort`: Topological sort
+      - 7.6.1 tsort: Background
+  - 8. Operating on fields
+    - 8.1 `cut`: Print selected parts of lines
+    - 8.2 `paste`: Merge lines of files
+    - 8.3 `join`: Join lines on a common field
+      - 8.3.1 General options
+      - 8.3.2 Pre-sorting
+      - 8.3.3 Working with fields
+      - 8.3.4 Controlling join's field matching
+      - 8.3.5 Header lines
+      - 8.3.6 Union, Intersection and Difference of files
+  - 9. Operating on characters
+    - 9.1 `tr`: Translate, squeeze, and/or delete characters
+      - 9.1.1 Specifying arrays of characters
+      - 9.1.2 Translating
+      - 9.1.3 Squeezing repeats and deleting
+    - 9.2 `expand`: Convert tabs to spaces
+    - 9.3 `unexpand`: Convert spaces to tabs
+  - 10. Directory listing
+    - 10.1 `ls`: List directory contents
+      - 10.1.1 Which files are listed
+      - 10.1.2 What information is listed
+      - 10.1.3 Sorting the output
+      - 10.1.4 General output formatting
+      - 10.1.5 Formatting file timestamps
+      - 10.1.6 Formatting the file names
+    - 10.2 `dir`: Briefly list directory contents
+    - 10.3 `vdir`: Verbosely list directory contents
+    - 10.4 `dircolors`: Color setup for ls
+  - 11. Basic operations
+    - 11.1 `cp`: Copy files and directories
+    - 11.2 `dd`: Convert and copy a file
+    - 11.3 `install`: Copy files and set attributes
+    - 11.4 `mv`: Move (rename) files
+    - 11.5 `rm`: Remove files or directories
+    - 11.6 `shred`: Remove files more securely
+  - 12. Special file types
+    - 12.1 `link`: Make a hard link via the link syscall
+    - 12.2 `ln`: Make links between files
+    - 12.3 `mkdir`: Make directories
+    - 12.4 `mkfifo`: Make FIFOs (named pipes)
+    - 12.5 `mknod`: Make block or character special files
+    - 12.6 `readlink`: Print value of a symlink or canonical file name
+    - 12.7 `rmdir`: Remove empty directories
+    - 12.8 `unlink`: Remove files via the unlink syscall
+  - 13. Changing file attributes
+    - 13.1 `chown`: Change file owner and group
+    - 13.2 `chgrp`: Change group ownership
+    - 13.3 `chmod`: Change access permissions
+    - 13.4 `touch`: Change file timestamps
+  - 14. File space usage
+    - 14.1 `df`: Report file system space usage
+    - 14.2 `du`: Estimate file space usage
+    - 14.3 `stat`: Report file or file system status
+    - 14.4 `sync`: Synchronize cached writes to persistent storage
+    - 14.5 `truncate`: Shrink or extend the size of a file
+  - 15. Printing text
+    - 15.1 `echo`: Print a line of text
+    - 15.2 `printf`: Format and print data
+    - 15.3 `yes`: Print a string until interrupted
+  - 16. Conditions
+    - 16.1 ``false`: Do nothing, unsuccessfully
+    - 16.2 ``true`: Do nothing, successfully
+    - 16.3 ``test`: Check file types and compare values
+      - 16.3.1 File type tests
+      - 16.3.2 Access permission tests
+      - 16.3.3 File characteristic tests
+      - 16.3.4 String tests
+      - 16.3.5 Numeric tests
+      - 16.3.6 Connectives for test
+    - 16.4 `expr`: Evaluate expressions
+      - 16.4.1 String expressions
+      - 16.4.2 Numeric expressions
+      - 16.4.3 Relations for expr
+      - 16.4.4 Examples of using expr
+  - 17. Redirection
+    - 17.1 `tee`: Redirect output to multiple files or processes
+  - 18. File name manipulation
+    - 18.1 `basename`: Strip directory and suffix from a file name
+    - 18.2 `dirname`: Strip last file name component
+    - 18.3 `pathchk`: Check file name validity and portability
+    - 18.4 `mktemp`: Create temporary file or directory
+    - 18.5 `realpath`: Print the resolved file name.
+    - 18.5.1 Realpath usage examples
+  - 19. Working context
+    - 19.1 `pwd`: Print working directory
+    - 19.2 `stty`: Print or change terminal characteristics
+      - 19.2.1 Control settings
+      - 19.2.2 Input settings
+      - 19.2.3 Output settings
+      - 19.2.4 Local settings
+      - 19.2.5 Combination settings
+      - 19.2.6 Special characters
+      - 19.2.7 Special settings
+    - 19.3 `printenv`: Print all or some environment variables
+    - 19.4 `tty`: Print file name of terminal on standard input
+  - 20. User information
+    - 20.1 `id`: Print user identity
+    - 20.2 `logname`: Print current login name
+    - 20.3 `whoami`: Print effective user name
+    - 20.4 `groups`: Print group names a user is in
+    - 20.5 `users`: Print login names of users currently logged in
+    - 20.6 `who`: Print who is currently logged in
+  - 21. System context
+    - 21.1 `date`: Print or set system date and time
+      - 21.1.1 Time conversion specifiers
+      - 21.1.2 Date conversion specifiers
+      - 21.1.3 Literal conversion specifiers
+      - 21.1.4 Padding and other flags
+      - 21.1.5 Setting the time
+      - 21.1.6 Options for date
+      - 21.1.7 Examples of date
+    - 21.2 `arch`: Print machine hardware name
+    - 21.3 `nproc`: Print the number of available processors
+    - 21.4 `uname`: Print system information
+    - 21.5 `hostname`: Print or set system name
+    - 21.6 `hostid`: Print numeric host identifier
+    - 21.7 `uptime`: Print system uptime and load
+  - 22. SELinux context
+    - 22.1 `chcon`: Change SELinux context of file
+    - 22.2 `runcon`: Run a command in specified SELinux context
+  - 23. Modified command invocation
+    - 23.1 `chroot`: Run a command with a different root directory
+    - 23.2 `env`: Run a command in a modified environment
+    - 23.2.1 General options
+    - 23.2.2 [-S/--split-string] usage in scripts
+      - Testing and troubleshooting
+    - 23.2.3 [-S/--split-string] syntax
+      - Splitting arguments by whitespace
+      - Escape sequences
+      - Comments
+      - Environment variable expansion
+    - 23.3 `nice`: Run a command with modified niceness
+    - 23.4 `nohup`: Run a command immune to hangups
+    - 23.5 `stdbuf`: Run a command with modified I/O stream buffering
+    - 23.6 `timeout`: Run a command with a time limit
+  - 24. Process control
+    - 24.1 `kill`: Send a signal to processes
+  - 25. Delaying
+    - 25.1 `sleep`: Delay for a specified time
+  - 26. Numeric operations
+    - 26.1 `factor`: Print prime factors
+    - 26.2 `numfmt`: Reformat numbers
+      - 26.2.1 General options
+      - 26.2.2 Possible units:
+      - 26.2.3 Examples of using numfmt
+    - 26.3 `seq`: Print numeric sequences
+  - 27. File permissions
+    - 27.1 Structure of File Mode Bits
+    - 27.2 Symbolic Modes
+      - 27.2.1 Setting Permissions
+      - 27.2.2 Copying Existing Permissions
+      - 27.2.3 Changing Special Mode Bits
+      - 27.2.4 Conditional Executability
+      - 27.2.5 Making Multiple Changes
+      - 27.2.6 The Umask and Protection
+    - 27.3 Numeric Modes
+    - 27.4 Operator Numeric Modes
+    - 27.5 Directories and the Set-User-ID and Set-Group-ID Bits
+  - 28. File timestamps
+  - 29. Date input formats
+    - 29.1 General date syntax
+    - 29.2 Calendar date items
+    - 29.3 Time of day items
+    - 29.4 Time zone items
+    - 29.5 Combined date and time of day items
+    - 29.6 Day of week items
+    - 29.7 Relative items in date strings
+    - 29.8 Pure numbers in date strings
+    - 29.9 Seconds since the Epoch
+    - 29.10 Specifying time zone rules
+    - 29.11 Authors of *parse_datetime*
+  - 30. Version sort ordering
+    - 30.1 Version sort overview
+      - 30.1.1 Using version sort in GNU Coreutils
+      - 30.1.2 Version sort and natural sort
+      - 30.1.3 Variations in version sort order
+    - 30.2 Version sort implementation
+      - 30.2.1 Version-sort ordering rules
+      - 30.2.2 Version sort is not the same as numeric sort
+      - 30.2.3 Version sort punctuation
+      - 30.2.4 Punctuation vs letters
+      - 30.2.5 The tilde (~)
+      - 30.2.6 Version sort ignores locale
+    - 30.3 Differences from Debian version `sort`
+      - 30.3.1 Hyphen/minus (-) and colon (:)
+      - 30.3.2 Special priority in GNU Coreutils version sort
+      - 30.3.3 Special handling of file extensions
+      - 30.3.4 Comparing two strings using Debian's algorithm
+    - 30.4 Advanced Topics
+      - 30.4.1 Reporting version sort bugs
+      - 30.4.2 Other version/natural `sort` implementations
+      - 30.4.3 Related source code
+  - 31. Opening the Software Toolbox
+    - Toolbox Introduction
+    - I/O Redirection
+    - The `who` Command
+    - The `cut` Command
+    - The `sort` Command
+    - The `uniq` Command
+    - Putting the Tools Together
+
+
+
+## GNU Coreutils
+
+This manual documents version 9.1 of the GNU core utilities, including the standard programs for text and file manipulation.
+
+Contents summary
+  - Output of entire files:     cat tac nl od base32 base64 basenc
+  - Output of parts of files:   head tail split csplit
+  - Formatting file contents:   fmt pr fold
+  - Summarizing files:          wc sum cksum b2sum md5sum sha1sum sha2
+  - Operating on sorted files:  sort shuf uniq comm ptx tsort
+  - Operating on fields:        cut paste join
+  - Operating on characters:    tr expand unexpand
+  - Directory listing:          ls dir vdir dircolors pwd
+  - Basic operations:           cp dd install mv rm shred
+  - Special files types:        mkdir rmdir unlink mkfifo mknod ln link readlink
+  - Changing file attributes:   chgrp chmod chown touch
+  - File space usage:           df du stat sync truncate
+  - Printing text:              echo printf yes
+  - Conditions:                 false true test expr
+  - Redirection:                tee
+  - File name manipulation:     dirname basename pathchk mktemp realpath
+  - Working context:            pwd printenv stty tty
+  - Env settings:               set printenv
+  - Terminal settings:          stty tty
+  - User info:                  id logname whoami groups users who
+  - System context:             date arch nproc uname hostname hostid uptime
+  - SELinux context:            chcon runcon
+  - Modified command calls:     chroot env nice nohup stdbuf timeout
+  - Process control:            kill
+  - Delaying:                   sleep
+  - Numeric operations:         factor numfmt seq
+Other
+  - Common options: Common options
+  - File permissions: Access modes
+  - File timestamps: File timestamp issues
+  - Date input formats: Specifying date strings
+  - Version sort ordering: Details on version-sort algorithm
+  - Opening the software toolbox: The software tools philosophy
+  - Concept index
+
+## The Detailed Node Listing
+
+- The Detailed Node Listing
+  - Common Options
+    - Exit status: Indicating program success or failure
+    - Backup options: Backup options
+    - Block size: Block size
+    - Floating point: Floating point number representation
+    - Signal specifications: Specifying signals
+    - Disambiguating names and IDs: chgrp, chown, chroot, id: user and group syntax
+    - Random sources: Sources of random data
+    - Target directory: Target directory
+    - Trailing slashes: Trailing slashes
+    - Traversing symlinks: Traversing symlinks to directories
+    - Treating / specially: Treating / specially
+    - Standards conformance: Standards conformance
+    - Multi-call invocation: Multi-call program invocation
+  - Output of entire files
+      - cat invocation: Concatenate and write files
+      - tac invocation: Concatenate and write files in reverse
+      - nl invocation: Number lines and write files
+      - od invocation: Write files in octal or other formats
+      - base32 invocation: Transform data into printable data
+      - base64 invocation: Transform data into printable data
+      - basenc invocation: Transform data into printable data
+  - Formatting file contents
+      - fmt invocation: Reformat paragraph text
+      - pr invocation: Paginate or columnate files for printing
+      - fold invocation: Wrap input lines to fit in specified width
+  - Output of parts of files
+      - head invocation: Output the first part of files
+      - tail invocation: Output the last part of files
+      - split invocation: Split a file into fixed-size pieces
+      - csplit invocation: Split a file into context-determined pieces
+  - Summarizing files
+      - wc invocation: Print newline, word, and byte counts
+      - sum invocation: Print checksum and block counts
+      - cksum invocation: Print CRC checksum and byte counts
+      - b2sum invocation: Print or check BLAKE2 digests
+      - md5sum invocation: Print or check MD5 digests
+      - sha1sum invocation: Print or check SHA-1 digests
+      - sha2 utilities: Print or check SHA-2 digests
+  - Operating on sorted files
+      - sort invocation: Sort text files
+      - shuf invocation: Shuffle text files
+      - uniq invocation: Uniquify files
+      - comm invocation: Compare two sorted files line by line
+      - ptx invocation: Produce a permuted index of file contents
+      - tsort invocation: Topological sort
+  - ptx: Produce permuted indexes
+      - General options in ptx: Options which affect general program behavior
+      - Charset selection in ptx: Underlying character set considerations
+      - Input processing in ptx: Input fields, contexts, and keyword selection
+      - Output formatting in ptx: Types of output format, and sizing the fields
+      - Compatibility in ptx: The GNU extensions to ptx
+  - Operating on fields
+  - cut invocation: Print selected parts of lines
+  - paste invocation: Merge lines of files
+  - join invocation: Join lines on a common field
+  - Operating on characters
+  - tr invocation: Translate, squeeze, and/or delete characters
+  - expand invocation: Convert tabs to spaces
+  - unexpand invocation: Convert spaces to tabs
+  - tr: Translate, squeeze, and/or delete characters
+  - Character arrays: Specifying arrays of characters
+  - Translating: Changing one set of characters to another
+  - Squeezing and deleting: Removing characters
+- Directory listing
+  - ls invocation: List directory contents
+  - dir invocation: Briefly list directory contents
+  - vdir invocation: Verbosely list directory contents
+  - dircolors invocation: Color setup for ls
+- ls:  List directory contents
+  - Which files are listed: Which files are listed
+  - What information is listed: What information is listed
+  - Sorting the output: Sorting the output
+  - General output formatting: General output formatting
+  - Formatting the file names: Formatting the file names
+- Basic operations
+  - cp invocation: Copy files and directories
+  - dd invocation: Convert and copy a file
+  - install invocation: Copy files and set attributes
+  - mv invocation: Move (rename) files
+  - rm invocation: Remove files or directories
+  - shred invocation: Remove files more securely
+- Special file types
+  - link invocation: Make a hard link via the link syscall
+  - ln invocation: Make links between files
+  - mkdir invocation: Make directories
+  - mkfifo invocation: Make FIFOs (named pipes)
+  - mknod invocation: Make block or character special files
+  - readlink invocation: Print value of a symlink or canonical file name
+  - rmdir invocation: Remove empty directories
+  - unlink invocation: Remove files via unlink syscall
+- Changing file attributes
+  - chown invocation: Change file owner and group
+  - chgrp invocation: Change group ownership
+  - chmod invocation: Change access permissions
+  - touch invocation: Change file timestamps
+- File space usage
+  - df invocation: Report file system space usage
+  - du invocation: Estimate file space usage
+  - stat invocation: Report file or file system status
+  - sync invocation: Synchronize cached writes to persistent storage
+  - truncate invocation: Shrink or extend the size of a file
+- Printing text
+  - echo invocation: Print a line of text
+  - printf invocation: Format and print data
+  - yes invocation: Print a string until interrupted
+- Conditions
+  - false invocation: Do nothing, unsuccessfully
+  - true invocation: Do nothing, successfully
+  - test invocation: Check file types and compare values
+  - expr invocation: Evaluate expressions
+- test: Check file types and compare values
+  - File type tests: File type tests
+  - Access permission tests: Access permission tests
+  - File characteristic tests: File characteristic tests
+  - String tests: String tests
+  - Numeric tests: Numeric tests
+- expr: Evaluate expression
+  - String expressions: + : match substr index length
+  - Numeric expressions: + - * / %
+  - Relations for expr: | & < <= = == != >= >
+  - Examples of expr: Examples of using expr
+- Redirection
+  - tee invocation: Redirect output to multiple files or processes
+- File name manipulation
+  - basename invocation: Strip directory and suffix from a file name
+  - dirname invocation: Strip last file name component
+  - pathchk invocation: Check file name validity and portability
+  - mktemp invocation: Create temporary file or directory
+  - realpath invocation: Print resolved file names
+- Working context
+  - pwd invocation: Print working directory
+  - stty invocation: Print or change terminal characteristics
+  - printenv invocation: Print all or some environment variables
+  - tty invocation: Print file name of terminal on standard input
+- stty: Print or change terminal characteristics
+  - Control: Control settings
+  - Input: Input settings
+  - Output: Output settings
+  - Local: Local settings
+  - Combination: Combination settings
+  - Characters: Special characters
+  - Special: Special settings
+- User information
+  - id invocation: Print user identity
+  - logname invocation: Print current login name
+  - whoami invocation: Print effective user ID
+  - groups invocation: Print group names a user is in
+  - users invocation: Print login names of users currently logged in
+  - who invocation: Print who is currently logged in
+- System context
+  - arch invocation: Print machine hardware name
+  - date invocation: Print or set system date and time
+  - nproc invocation: Print the number of processors
+  - uname invocation: Print system information
+  - hostname invocation: Print or set system name
+  - hostid invocation: Print numeric host identifier
+  - uptime invocation: Print system uptime and load
+- date: Print or set system date and time
+  - Time conversion specifiers: %[HIklMNpPrRsSTXzZ]
+  - Date conversion specifiers: %[aAbBcCdDeFgGhjmuUVwWxyY]
+  - Literal conversion specifiers: %[%nt]
+  - Padding and other flags: Pad with zeros, spaces, etc.
+  - Setting the time: Changing the system clock
+  - Options for date: Instead of the current time
+  - Date input formats: Specifying date strings
+  - Examples of date: Examples
+- SELinux context
+  - chcon invocation: Change SELinux context of file
+  - runcon invocation: Run a command in specified SELinux context
+- Modified command invocation
+  - chroot invocation: Run a command with a different root directory
+  - env invocation: Run a command in a modified environment
+  - nice invocation: Run a command with modified niceness
+  - nohup invocation: Run a command immune to hangups
+  - stdbuf invocation: Run a command with modified I/O buffering
+  - timeout invocation: Run a command with a time limit
+- Process control
+  - kill invocation: Sending a signal to processes.
+- Delaying
+  - sleep invocation: Delay for a specified time
+- Numeric operations
+  - factor invocation: Print prime factors
+  - numfmt invocation: Reformat numbers
+  - seq invocation: Print numeric sequences
+- File timestamps
+  - File timestamps: File timestamp issues
+- File permissions
+  - Mode Structure: Structure of file mode bits
+  - Symbolic Modes: Mnemonic representation of file mode bits
+  - Numeric Modes: File mode bits as octal numbers
+  - Directory Setuid and Setgid: Set-user-ID and set-group-ID on directories
+- Date input formats
+  - General date syntax: Common rules
+  - Calendar date items: 21 Jul 2020
+  - Time of day items: 9:20pm
+  - Time zone items: UTC, -0700, +0900, …
+  - Combined date and time of day items: 2020-07-21T20:02:00,000000-0400
+  - Day of week items: Monday and others
+  - Relative items in date strings: next tuesday, 2 years ago
+  - Pure numbers in date strings: 20200721, 1440
+  - Seconds since the Epoch: @1595289600
+  - Specifying time zone rules: TZ="America/New_York", TZ="UTC0"
+  - Authors of parse_datetime: Bellovin, Eggert, Salz, Berets, et al.
+- Version sorting order
+  - Version sort overview:
+  - Version sort implementation:
+  - Differences from Debian version sort:
+  - Advanced version sort topics:
+- Opening the software toolbox
+  - Toolbox introduction: Toolbox introduction
+  - I/O redirection:  I/O redirection
+  - The who command:  The who command
+  - The cut command:  The cut command
+  - The sort command: The sort command
+  - The uniq command: The uniq command
+  - Putting the tools together: putting the tools together

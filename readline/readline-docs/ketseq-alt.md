@@ -1,0 +1,105 @@
+Emacs Standard bindings for ALT
+
+ALT+key
+"\eb": backward-word
+"\ec": capitalize-word
+"\el": downcase-word
+"\e!": complete-command
+"\e/": complete-filename
+"\e@": complete-hostname
+"\e{": complete-into-braces
+"\e~": complete-username
+"\e$": complete-variable
+"\e<": beginning-of-history
+
+"\eOD": backward-char
+"\e[D": backward-char
+"\e[1;5D": backward-word # CTRL+LEFT
+"\eOH": beginning-of-line
+"\e[H": beginning-of-line
+"\e\e": complete
+"\eOP": complete
+"\e[1;7D": copy-backward-word
+"\e[3~": delete-char
+"\e\\": delete-horizontal-space
+"\eOR": dump-functions
+"\eOS": dump-macros
+"\eOQ": dump-variables
+
+"\e>": end-of-history
+"\eOF": end-of-line
+"\e[F": end-of-line
+"\eOC": forward-char
+"\e[C": forward-char
+"\e[1;5C": forward-word
+"\ef": forward-word
+"\eg": glob-complete-word
+"\e^": history-expand-line
+"\e[A": history-search-backward
+"\e[B": history-search-forward
+"\e#": insert-comment
+"\e*": insert-completions
+"\e.": insert-last-argument
+"\e[1;5A": insert-last-argument
+"\e_": insert-last-argument
+"\e[1;5B": kill-whole-line
+"\e[3;5~": kill-word
+"\ed": kill-word
+"\e[Z": menu-complete-backward
+"\eOB": next-history
+"\en": non-incremental-forward-search-history
+"\ep": non-incremental-reverse-search-history
+"\e=": possible-completions
+"\e?": possible-completions
+"\eOA": previous-history
+"\e[15~": print-last-kbd-macro
+"\er": revert-line
+"\e ": set-mark
+"\e&": tilde-expand
+"\et": transpose-words
+"\eu": upcase-word
+"\e[24~": vi-editing-mode
+"\e[1;7C": yank
+"\e.": yank-last-arg
+"\e[1;5A": yank-last-arg
+"\e_": yank-last-arg
+"\e[1;7A": yank-pop
+"\ey": yank-pop
+
+"\e-": digit-argument
+"\e0": digit-argument
+"\e1": digit-argument
+"\e2": digit-argument
+"\e3": digit-argument
+"\e4": digit-argument
+"\e5": digit-argument
+"\e6": digit-argument
+"\e7": digit-argument
+"\e8": digit-argument
+"\e9": digit-argument
+
+"\eA": do-lowercase-version
+"\eB": do-lowercase-version
+"\eC": do-lowercase-version
+"\eD": do-lowercase-version
+"\eE": do-lowercase-version
+"\eF": do-lowercase-version
+"\eG": do-lowercase-version
+"\eH": do-lowercase-version
+"\eI": do-lowercase-version
+"\eJ": do-lowercase-version
+"\eK": do-lowercase-version
+"\eL": do-lowercase-version
+"\eM": do-lowercase-version
+"\eN": do-lowercase-version
+"\eP": do-lowercase-version
+"\eQ": do-lowercase-version
+"\eR": do-lowercase-version
+"\eS": do-lowercase-version
+"\eT": do-lowercase-version
+"\eU": do-lowercase-version
+"\eV": do-lowercase-version
+"\eW": do-lowercase-version
+"\eX": do-lowercase-version
+"\eY": do-lowercase-version
+"\eZ": do-lowercase-version

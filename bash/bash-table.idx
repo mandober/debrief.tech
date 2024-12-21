@@ -1,0 +1,179 @@
+# Bash :: Table
+
+
+## Builtins (61)
+
+:     .   [      alias      bg      bind     break     builtin     caller   
+cd    command    compgen    complete   compopt   continue   declare   dirs   disown   echo   enable   eval   exec   exit   export   false   fc   fg   getopts   hash   help   history   jobs   kill   let   local   logout   mapfile   popd   printf   pushd   pwd   read   readarray   readonly   return   set   shift   shopt   source   suspend   test   times   trap   true   type   typeset   ulimit   umask   unalias   unset   wait
+
+synonyms:
+- `:`/true
+- `[`/test
+- `.`/source
+- `declare`/typeset
+- `mapfile`/readarray
+
+CATEGORIZED:
+- *job*: bg fg disown jobs wait exec exit kill logout suspend trap
+- *decl-builtins*: declare (typeset), export, readonly, local, unset
+- *nav*: cd pwd popd pushd dirs
+- *comp*: complete compgen compopt
+- *aliases*: alias, unalias
+- *cmdline-hist*: history fc
+
+printf echo eval
+
+read, mapfile (readarray)
+. (source)
+true (:), false
+[ (test)
+hash, command
+builtin, enable, help, 
+set, shopt
+ulimit umask
+bind
+break continue return caller
+getopts shift
+let
+times
+type
+
+## Parallels
+
+- Arithetics:
+  - let builtin
+  - ((…)) keyword
+  - expr program
+
+
+
+## Index
+
+- keywords
+  - Bourne shell keywords
+  - bash keywords
+- builtins
+  - Bourne shell builtins
+  - bash builtins
+  - intrinsic POSIX builtins
+  - Special POSIX builtins: `break : . continue eval exec exit export readonly return set shift trap unset`
+- Shell Parameters
+  - name is identifier: shell variables
+  - name is a number: positional parameters
+  - name is a symbol: special parameters
+- env vars
+  - common (common on Linux) env vars
+  - common (Unix-shell common) env vars
+  - Bourne shell env vars
+  - POSIX env vars
+  - bash env vars
+  - locale env vars
+  - XDG env vars
+- shell options
+  - Bourne shell options
+  - bash shell options
+
+
+
+
+
+Legend:
+- Cat[egotry]
+  - bou     Bourne shell builtin
+  - bas     Bash builtin
+  - spb     Special POSIX builtin
+  - ssp     Special shell parameter
+- Type
+  - jobs    Job control
+  - nav     Navigation
+  - comp    Completion
+  - hist    Command-line history
+- Kind
+  - op      Operator
+  - kw      Keyword
+  - bb      Builtin
+  - pr      Program
+  - ev      Environment variable
+  - par     Shell Parameter
+
+
+Name      |Ki|Cat| Origin | Purpose        | Desc
+----------|--|--|--------|----------------|------------------------
+$-        |sp|sp | Bourne | special params | short form of SHELLOPTS
+$$        |sp|sp | Bourne | special params | PID
+$#        |sp|sp | Bourne | special params | 
+$!        |sp|sp | Bourne | special params | 
+$?        |sp|sp | Bourne | special params | 
+$@        |sp|sp | Bourne | special params | 
+$*        |sp|sp | Bourne | special params | 
+
+
+$_        |  |sp | bash   | bash envar     | 
+.         |  |sB | Bourne | POSIX          | source
+:         |  |sB | Bourne | lang           | null command, same as 'true'
+[         | B | Bourne | lang           | 
+alias     | B | bash   | lang
+bg        | B | bash   | jobs
+bind      | B | bash   | rl
+break     |sB | Bourne | lang
+builtin   | B | bash   | lang
+caller    | B | bash   | lang
+cd        | B | Bourne | nav
+command   | B | bash   | lang
+compgen   | B | bash   | comp
+complete  | B | bash   | comp
+compopt   | B | bash   | comp
+continue  |spb| Bourne | lang
+declare   | B | bash   | lang
+dirs      | B | bash   | nav
+disown    | B | bash   | jobs
+echo      | B | bash   | lang
+enable    | B | bash   | 
+eval      | B | Bourne | lang
+exec      | B | Bourne | 
+exit      | B | Bourne | lang
+export    | B | Bourne | lang
+fc        | B | bash   | history
+fg        | B | bash   | job control
+getopts   | B | Bourne | param
+hash      | B | Bourne | 
+help      | B | bash   | 
+history   | B | bash   | history
+jobs      | B | bash   | jobs
+kill      | B | bash   | jobs
+let       | B | bash   | lang
+local     | B | bash   | lang
+logout    | B | bash   | 
+mapfile   | B | bash   | lang
+popd      | B | bash   | nav
+printf    | B | bash   | lang
+pushd     | B | bash   | nav
+pwd       | B | Bourne | nav
+read      | B | bash   | lang
+readarray | B | bash   | lang
+readonly  | B | Bourne | var
+return    | B | Bourne | lang
+set       | B | bash   | conf, param;
+shift     | B | Bourne | param
+shopt     | B | bash   | conf
+source    | B | bash   | 
+suspend   | B | bash   | jobs
+test      | B | Bourne | lang
+times     | B | Bourne | 
+trap      | B | Bourne | 
+type      | B | bash   | 
+typeset   | B | bash   | param
+ulimit    | B | bash   | security
+umask     | B | Bourne | security
+unalias   | B | bash   | lang
+unset     | B | Bourne | lang
+wait      | B | bash   | jobs
+
+
+- nav   Directory stack in bash
+- jobs  Job control in bash
+- comp  Programmable completions in bash
+- lang  Bash command language
+
+
+set: un/set shopts and positional parameters, change shell attributes and positional parameters, display shell variables.

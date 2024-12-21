@@ -1,0 +1,107 @@
+# Init systems
+
+- https://wiki.gentoo.org/wiki/Init_system
+- https://wiki.gentoo.org/wiki/Comparison_of_init_systems
+
+- Demystifying the init system (PID 1)
+https://felipec.wordpress.com/2013/11/04/init/
+
+An **init system** is the first program, other than the kernel, to be run after a Linux distribution is booted.
+
+init systems
+- sysvinit
+- OpenRC
+- systemd
+- SMF
+- launchd
+- Epoch
+- finit
+- runit
+- s6 + s6-rc
+- 66 + 66-rc
+- BSD rc.d
+- dinit
+
+Features of init systems
+- run as PID 1
+- adopts orphans
+- Main dependencies
+- Init script/service format
+- Per-service configuration
+- Cross-service dependencies/events
+- Parallel service startup
+- Keeping daemons alive
+- Preferred service file supplier
+- Filesystem mounting
+- getty (terminal prompts)
+- Networking setup
+- X11 Display Manager setup
+- process supervision
+- socket activation
+- notify about new hardware
+- dynamically respond to system events
+- targets of systemd comparable to SysVinit RunLevels
+- vast number of targets
+- Services as Units
+
+
+External resources
+- s6 - Forum thread
+  https://forums.gentoo.org/viewtopic-t-994548.html
+- A New Init - Forum thread
+  https://forums.gentoo.org/viewtopic.php?p=7663768
+- openrc-init
+  https://github.com/OpenRC/openrc
+  https://github.com/OpenRC/openrc/commit/13ca79856e5836117e469c3edbcfd4bf47b6bab0
+- GNU shepherd - service manager for the GNU OS
+  https://www.gnu.org/software/shepherd/
+- Finit - Fast init for Linux systems
+  https://troglobit.com/projects/finit/
+- 66tools-overlay
+  https://git.obarun.org/gentoo-66/66tools-overlay
+- Original maintainer of dinit
+  https://davmac.org/projects/dinit/
+- supervisord
+  http://supervisord.org/
+- daemontools
+  http://cr.yp.to/daemontools.html
+- A history of modern init systems (1992-2015)
+  https://web.archive.org/web/20150929045849/http://blog.darknedgy.net/technology/2015/09/05/0/
+- Lennart Poettering on systemd's Tumultuous Ascendancy
+  https://thenewstack.io/unix-greatest-inspiration-behind-systemd/
+- Process_supervision
+  https://en.wikipedia.org/wiki/Process_supervision
+- God
+  http://godrb.com/
+- runit
+  https://smarden.org/runit/
+  https://smarden.org/runit/benefits
+- SysVinit vs Systemd
+  https://www.youtube.com/watch?v=Fz8Ldw-s8_Q
+
+## Desc
+
+- openrc-init
+  An init system (replacement for /sbin/init) included with OpenRC since version 0.25.0.
+  https://wiki.gentoo.org/wiki/OpenRC
+- runit
+  a daemontools-inspired process supervision suite that also provides a program suitable for running as process 1.
+  https://wiki.gentoo.org/wiki/Runit
+- s6 + s6-rc
+  an init system built using components from the s6, s6-rc and s6-linux-init packages
+  https://wiki.gentoo.org/wiki/S6
+  https://wiki.gentoo.org/wiki/S6-rc
+- sysvinit
+  A collection of System V-style init programs originally written by Miquel van Smoorenburg
+  https://wiki.gentoo.org/wiki/Sysvinit
+- systemd
+  A modern SysV-style init and rc replacement for Linux systems.
+- busybox-init
+  suited to embedded operating systems, used by Alpine Linux, SliTaz 5(Rolling), Tiny Core Linux, and VMware ESXi, and used by OpenWrt before it was replaced with procd
+- smss.exe
+  Session Manager Subsystem, an equivalent in Windows NT
+
+
+## Init
+
+https://en.wikipedia.org/wiki/Init

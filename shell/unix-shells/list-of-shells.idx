@@ -1,0 +1,29 @@
+# List of Unix shells
+
+Shell name            | Short | Author            | Rel  | Latest
+----------------------|-------|-------------------|------|-------
+Almquist shell        | ash   | Kenneth Almquist  | 1989 | 
+Bourne-again shell    | bash  | Brian Fox         | 1989 | 
+Bourne shell          | sh    | Stephen Bourne    | 1979 | 
+C shell               | csh   | Bill Joy          | 1978 | 
+Fish shell            | fish  | Axel Liljencrantz | 2005 | 
+Hamilton C shell      |       | Nicole Hamilton   | 1988 | 
+Thompson shell        |       | Ken Thompson      | 1971 | 
+Korn shell            | ksh   | David Korn        | 1983 | 
+Scheme shell          | sash  |                   | 1994 | 
+Tenex C shell         | tcsh  |                   | 1983 | 
+Z shell               | zsh   | Paul Falstad      | 1990 | 
+POSIX shell           | sh    |                   | 1992 | 
+PowerShell            | pwsh  | Jeffrey Snover    | 2016 | 
+PWB                   |       |                   |      | 
+Qshell                |       |                   |      | 
+rc                    | rc    |                   |      | 
+Wish shell            | wish  |                   |      | 
+Public Korn shell     | pdksh |                   |      | 
+Debian Almquist shell | dash  |                   |      | 
+Scsh
+
+
+- POSIX is not an actual shell but the standard specifying the shell behavior, derived from the operation(al semantics) of the Bourne shell.
+- Hamilton C shell is the Unix C shell ported to Windows.
+- PowerShell is a shell native to Windows made cross-platform. It is nevertheless interesting cos it deals with objects instead of text.

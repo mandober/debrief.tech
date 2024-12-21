@@ -1,0 +1,198 @@
+# bash builtins
+
+
+Builtin   | Origin | Executable  | Alias       | Notes
+----------|--------|-------------|-------------|---------------
+:         | Bourne |             | true        |
+.         | Bourne |             | source      |
+[         | Bourne | /bin/[      | test        |
+alias     |        |             |             |
+bg        |        |             |             |
+bind      |        |             |             |
+break     | Bourne |             |             |
+builtin   |        |             |             |
+caller    |        |             |             |
+cd        | Bourne |             |             |
+command   |        |             |             |
+compgen   |        |             |             |
+complete  |        |             |             |
+compopt   |        |             |             |
+continue  | Bourne |             |             |
+declare   |        |             |             |
+dirs      |        |             |             |
+disown    |        |             |             |
+echo      |        |             |             |
+enable    |        |             |             |
+eval      | Bourne |             |             |
+exec      | Bourne |             |             |
+exit      | Bourne |             |             |
+export    | Bourne |             |             |
+false     |        |             |             |
+fc        |        |             |             |
+fg        |        |             |             |
+getopts   | Bourne |             |             |
+hash      | Bourne |             |             |
+help      |        |             |             |
+history   |        |             |             |
+jobs      |        |             |             |
+kill      |        |             |             |
+let       |        |             |             |
+local     |        |             |             |
+logout    |        |             |             |
+mapfile   |        |             |             |
+popd      |        |             |             |
+printf    |        |             |             |
+pushd     |        |             |             |
+pwd       | Bourne |             |             |
+read      |        |             |             |
+readarray |        |             |             |
+readonly  | Bourne |             |             |
+return    | Bourne |             |             |
+set       |        |             |             |
+shift     | Bourne |             |             |
+shopt     |        |             |             |
+source    |        |             |             |
+suspend   |        |             |             |
+test      | Bourne |             | test        |
+times     | Bourne |             |             |
+trap      | Bourne |             |             |
+true      |        |             |             |
+type      |        |             |             |
+typeset   |        |             |             |
+ulimit    |        |             |             |
+umask     | Bourne |             |             |
+unalias   |        |             |             |
+unset     | Bourne |             |             |
+wait      |        |             |             |
+
+
+
+## Classification of builtins
+
+- .
+- :
+- [
++ alias
+- bg
++ bind
+- break
++ builtin
++ caller
+- cd
++ command
+- compgen
+- complete
+- compopt
+- continue
++ declare
+- dirs
+- disown
++ echo
++ enable
+- eval
+- exec
+- exit
+- export
+- false
+- fc
+- fg
+- getopts
+- hash
++ help
+- history
+- jobs
+- kill
++ let
++ local
++ logout
++ mapfile
+- popd
++ printf
+- pushd
+- pwd
++ read
++ readarray
+- readonly
+- return
+- set
+- shift
+- shopt
++ source
+- suspend
+- test
+- times
+- trap
+- true
++ type
++ typeset
++ ulimit
+- umask
++ unalias
+- unset
+- wait
+
+
+
+## Index of all builtins
+
+- .
+- :
+- [
+- alias
+- bg
+- bind
+- break
+- builtin
+- caller
+- cd
+- command
+- compgen
+- complete
+- compopt
+- continue
+- declare
+- dirs
+- disown
+- echo
+- enable
+- eval
+- exec
+- exit
+- export
+- false
+- fc
+- fg
+- getopts
+- hash
+- help
+- history
+- jobs
+- kill
+- let
+- local
+- logout
+- mapfile
+- popd
+- printf
+- pushd
+- pwd
+- read
+- readarray
+- readonly
+- return
+- set
+- shift
+- shopt
+- source
+- suspend
+- test
+- times
+- trap
+- true
+- type
+- typeset
+- ulimit
+- umask
+- unalias
+- unset
+- wait

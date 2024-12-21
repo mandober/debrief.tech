@@ -1,0 +1,28 @@
+13. Functions
+  - 13.1 What Is a Function?
+  - 13.2 Lambda Expressions
+    - 13.2.1 Components of a Lambda Expression
+    - 13.2.2 A Simple Lambda Expression Example
+    - 13.2.3 Features of Argument Lists
+    - 13.2.4 Documentation Strings of Functions
+  - 13.3 Naming a Function
+  - 13.4 Defining Functions
+  - 13.5 Calling Functions
+  - 13.6 Mapping Functions
+  - 13.7 Anonymous Functions
+  - 13.8 Generic Functions
+  - 13.9 Accessing Function Cell Contents
+  - 13.10 Closures
+  - 13.11 Open Closures
+  - 13.12 Advising Emacs Lisp Functions
+    - 13.12.1 Primitives to manipulate advices
+    - 13.12.2 Advising Named Functions
+    - 13.12.3 Ways to compose advice
+    - 13.12.4 Adapting code using the old defadvice
+    - 13.12.5 Advice and Byte Code
+  - 13.13 Declaring Functions Obsolete
+  - 13.14 Inline Functions
+  - 13.15 The declare Form
+  - 13.16 Telling the Compiler that a Function is Defined
+  - 13.17 Determining whether a Function is Safe to Call
+  - 13.18 Other Topics Related to Functions

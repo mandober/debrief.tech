@@ -1,0 +1,32 @@
+12. Variables
+  - 12.1 Global Variables
+  - 12.2 Variables that Never Change
+  - 12.3 Local Variables
+  - 12.4 When a Variable is Void
+  - 12.5 Defining Global Variables
+  - 12.6 Tips for Defining Variables Robustly
+  - 12.7 Accessing Variable Values
+  - 12.8 Setting Variable Values
+  - 12.9 Running a function when a variable is changed.
+    - 12.9.1 Limitations
+  - 12.10 Scoping Rules for Variable Bindings
+    - 12.10.1 Dynamic Binding
+    - 12.10.2 Proper Use of Dynamic Binding
+    - 12.10.3 Lexical Binding
+    - 12.10.4 Using Lexical Binding
+    - 12.10.5 Converting to Lexical Binding
+  - 12.11 Buffer-Local Variables
+    - 12.11.1 Introduction to Buffer-Local Variables
+    - 12.11.2 Creating and Deleting Buffer-Local Bindings
+    - 12.11.3 The Default Value of a Buffer-Local Variable
+  - 12.12 File Local Variables
+  - 12.13 Directory Local Variables
+  - 12.14 Connection Local Variables
+    - 12.14.1 Connection Local Profiles
+    - 12.14.2 Applying Connection Local Variables
+  - 12.15 Variable Aliases
+  - 12.16 Variables with Restricted Values
+  - 12.17 Generalized Variables
+    - 12.17.1 The setf Macro
+    - 12.17.2 Defining new setf forms
+  - 12.18 Multisession Variables

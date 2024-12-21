@@ -1,0 +1,41 @@
+# Options Table :: Legend
+
+
+## Option types and formats
+
+Option types
+- Boolean option
+- Number option
+- String option
+- List
+  - List of strings
+  - List of flags
+  - List-items separators:
+    - comma
+    - colon
+    - main items separated by comma, subitems by colon, `a,A:b,BC:c,d`
+    - main items separated by colon, subitems by comma, `vi:m,un:do`
+  - Concrete lists:
+    1. Comma-separated list of strings ('spellfile', 'path')
+
+
+
+- Boolean options
+  - enable  `:set   option`
+  - disable `:set nooption`
+  - toggle  `:set   option!`
+- Default value
+  - get opt val in script `:echo &option`
+  - set default     value `:set option&`
+  - set default Vim value `:set option&vim`
+  - set default Vi  value `:set option&vi`
+
+
+- option format
+  - Boolean: 0/1
+  - String-List
+    - (list of) Flags, juxtaposed characters, (aAbCD)
+    - CSL comma-separated list (vim,vi,elvis)
+    - NSL colon-separated list (onetime:long:match)
+    - comma-separated list with colon-separated sublists (vi:m,un:do)
+    - colon-separated list with comma-separated sublists (a,A:b,BC:c,d)

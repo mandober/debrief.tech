@@ -1,0 +1,11 @@
+3. Numbers
+  - 3.1 Integer Basics
+  - 3.2 Floating-Point Basics
+  - 3.3 Type Predicates for Numbers
+  - 3.4 Comparison of Numbers
+  - 3.5 Numeric Conversions
+  - 3.6 Arithmetic Operations
+  - 3.7 Rounding Operations
+  - 3.8 Bitwise Operations on Integers
+  - 3.9 Standard Mathematical Functions
+  - 3.10 Random Numbers

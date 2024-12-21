@@ -1,0 +1,40 @@
+# 50. Customization
+
+- [50.1 Customization Interface](./50.1-customization-interface.md)
+  - 50.1.1 Customization Groups
+  - 50.1.2 Browsing and Searching for Settings
+  - 50.1.3 Changing a Variable
+  - 50.1.4 Saving Customizations
+  - 50.1.5 Customizing Faces
+  - 50.1.6 Customizing Specific Items
+  - 50.1.7 Custom Themes
+  - 50.1.8 Creating Custom Themes
+- [50.2 Variables](./50.2-variables.md)
+  - 50.2.1 Examining and Setting Variables
+  - 50.2.2 Hooks
+  - 50.2.3 Local Variables
+  - 50.2.4 Local Variables in Files
+  - 50.2.4.1 Specifying File Variables
+  - 50.2.4.2 Safety of File Variables
+  - 50.2.5 Per-Directory Local Variables
+  - 50.2.6 Per-Connection Local Variables
+- [50.3 Customizing Key Bindings](./50.3-customizing-key-bindings.md)
+  - 50.3.1 Keymaps
+  - 50.3.2 Prefix Keymaps
+  - 50.3.3 Local Keymaps
+  - 50.3.4 Minibuffer Keymaps
+  - 50.3.5 Changing Key Bindings Interactively
+  - 50.3.6 Rebinding Keys in Your Init File
+  - 50.3.7 Modifier Keys
+  - 50.3.8 Rebinding Function Keys
+  - 50.3.9 Named ASCII Control Characters
+  - 50.3.10 Rebinding Mouse Buttons
+  - 50.3.11 Disabling Commands
+- [50.4 Emacs Initialization File](./50.4-emacs-initialization-file.md)
+  - 50.4.1 Init File Syntax
+  - 50.4.2 Init File Examples
+  - 50.4.3 Terminal-specific Initialization
+  - 50.4.4 How Emacs Finds Your Init File
+  - 50.4.5 Non-ASCII Characters in Init Files
+  - 50.4.6 The Early Init File
+- [50.5 Keeping Persistent Authentication Information](./50.5-authentication-information.md)

@@ -1,0 +1,144 @@
+# Bash :: Builtins Table
+
+- Thompson shell
+  - Thompson shell keywords: `if`
+  - Thompson shell builtins: `:, chdir, exit, login, newgrp, shift, wait`
+  https://en.wikipedia.org/wiki/Thompson_shell
+  https://etsh.dev/man/_tsh.1.html
+
+* `goto` is implemented in an interesting way, as it is separate from the shell. When asked to jump to "LABEL", it seeks the current command file for a line that says `: LABEL` (recall that `:` is simply ignored), then exits. When the shell tries to read a next line, the repositioned file descriptor will direct it to the labelled location. (thus implementing a procedure call a la cmdexe).
+* There is no redirection of additional file descriptors other than standard input and output (0 and 1) in Thompson shell. Redirection of stderr (file descriptor 2) also requires an external program wrapper, `fd2`.
+* The shell supports globbing, but actually implements it by deferring it to a `glob` command that replaces the arguments and calls the requested command.
+* Thompson shell has positional parameters, but no named variables nor access to environmental variables.
+* It understands the creation of background commands with `&`, similar to Bourne shell.
+* It offers quoting and backslash escapes, though the single quotes work differently from Bourne shell.
+
+The first Unix shell was the **Thompson shell**, sh, written by **Ken Thompson** at Bell Labs and distributed with Versions 1 through 6 of Unix, from 1971 to 1975. Though rudimentary by modern standards, it introduced many of the basic features common to all later Unix shells, including piping, simple control structures using if and goto, and filename wildcarding. It was modeled after the *Multics shell*, developed in 1965 by American software engineer Glenda Schroeder. Schroeder's Multics shell was itself modeled after the *RUNCOM* program *Louis Pouzin* showed to the Multics Team. The "rc" suffix on some Unix configuration files (for example, ".vimrc"), is a remnant of the RUNCOM ancestry of Unix shells.
+
+
+
+- Programmer's Workbench (PWB) shell:
+  - PWB builtins: `:`
+  - PWB keywords: `if echo exit goto shift`
+  https://en.wikipedia.org/wiki/PWB_shell
+  sh, for, case, if, while, :, ., break, continue, cd, eval,
+  exec, exit, export, login, newgrp, read, readonly, set,
+  shift, times, trap, umask, wait
+
+The **PWB shell** or **Mashey shell**, sh, was an upward-compatible version of the Thompson shell, augmented by *John Mashey* and others and distributed with the Programmer's Workbench UNIX, circa 1975-1977. It focused on making shell programming practical, especially in large shared computing centers. It added *shell variables* (precursors of environment variables, including the search path mechanism that evolved into PATH), *user-executable shell scripts*, and *interrupt-handling*. *Control structures* were extended from if/goto to if/then/else/endif, switch/breaksw/endsw, and while/end/break/continue. As shell programming became widespread, these external commands were incorporated into the shell itself for performance.
+* The if and goto commands were made internal to the shell, and extended to allow if-then-else-endif, and switch and while constructs were introduced, as well as onintr to ignore interrupts or catch them to perform cleanup.[1] Simple variables could be used, although their names were limited to one letter and some letters were reserved for special purposes, of which some are the precursors of the environment variables found in all Unix systems from Version 7 onward.
+* For example, The $s variable is the ancestor of $HOME, used to avoid hard-coding pathnames. The $p variable is the ancestor of $PATH, which let users search for commands in their own choice of directories. Unlike most of the UNIX systems of the time, the original PWB/UNIX computer center was shared by multiple programming groups who could not change the contents of /bin or /usr/bin, but wanted to create their own sets of shared commands. In addition, the shell's command-searching was enhanced to allow shell procedures to be invoked like binary commands, i.e., if the shell found a non-binary file marked executable, it would fork another shell instance to read that file as a shell script. Thus people could type command arguments rather than sh pathname/command arguments. All this behavior was packaged as the function `pexec`, which is the ancestor of `execvp`, to allow any program to invoke commands in the same way as the shell.
+* In addition to these variables [$n, $p, $r, $s, $t], the following is provided: `$$` contains a 5-digit number that is the unique process number of the current shell. In some circumstances, it is necessary to know the number of a process, in order to kill it, for example. However, its most common use to date has been that of generating unique names for temporary files.
+* The $ character, used previously for identifying arguments to a shell script, became the marker for dereferencing a variable, and could be used to insert a variable's value into a string in double quotes.
+
+https://web.archive.org/web/20161006224938/http://www.in-ulm.de/~mascheck/bourne/n.u-w.mashey.html
+
+
+
+- Bourne keywords: `if then else elif fi case in esac for while until do done`
+- Bourne builtins (28):
+https://en.wikipedia.org/wiki/Bourne_shell
+
+The **Bourne shell**, sh, was a new Unix shell by *Stephen Bourne* at Bell Labs. Distributed as the shell for UNIX Version 7 in 1979, it introduced the rest of the basic features considered common to all the later Unix shells, including *here documents*, *command substitution*, *more generic variables* and *more extensive builtin control structures*. The language, including the use of a reversed *keyword* to mark the end of a block, was influenced by ALGOL 68.
+
+
+The **POSIX standard** specifies its standard shell as a strict subset of the Korn shell.
+
+The **C shell**, csh, was modeled on the C programming language, including the control structures and the expression grammar. It was written by Bill Joy as a graduate student at University of California, Berkeley, and was widely distributed with BSD Unix. The C shell also introduced many features for interactive work, including the history and editing mechanisms, aliases, directory stacks, tilde notation, cdpath, job control and path hashing.
+
+
+https://en.wikipedia.org/wiki/Unix_shell
+
+
+.         | Bourne | special | syn:source
+:         |Thompson| special 
+[         | Bourne |                 | syn:test
+alias     | bash   |
+bg        | bash   |                | Job
+bind      | bash   |  
+break     | Bourne | special
+builtin   | bash   |                      | BM
+caller    | bash   |
+cd        | Bourne |
+command   | bash   |
+compgen   | bash   |                | COMP
+complete  | bash   |                | COMP
+compopt   | bash   |                | COMP
+continue  | Bourne | special
+declare   | bash   |                       | Decl
+dirs      | bash   |                       | Nav
+disown    | bash   |                       | Job
+echo      | bash   |
+enable    | bash   |                       | BM
+eval      | Bourne | special
+exec      | Bourne | special
+exit      | Bourne | special
+export    | Bourne | special
+fc        | bash   |
+fg        | bash   |               | Job
+getopts   | Bourne |
+hash      | Bourne |
+help      | bash   |               | BM
+history   | bash   |
+jobs      | bash   |               | Job
+kill      | bash   |               | Job
+let       | bash   |
+local     | bash   |
+logout    | bash   |
+mapfile   | bash   |
+popd      | bash   |
+printf    | bash   |
+pushd     | bash   |
+pwd       | Bourne |
+read      | bash   |
+readarray | bash   |
+readonly  | Bourne | special
+return    | Bourne | special
+set       | bash   | special | Conf
+shift     | Bourne | special
+shopt     | bash   |               | Conf
+source    | bash   | special |
+suspend   | bash   |               | Job
+test      | Bourne |
+times     | Bourne | special
+trap      | Bourne | special
+type      | bash   |
+typeset   | bash   |                | Decl
+ulimit    | bash   |
+umask     | Bourne |
+unalias   | bash   |
+unset     | Bourne | special | Decl
+wait      | bash   |
+
+
+
+Special POSIX builtins: `break : . continue eval exec exit export readonly return set shift trap unset`
+
+Legend:
+- Cat[egotry]
+  - bou     Bourne shell builtin
+  - bas     Bash builtin
+  - spb     Special POSIX builtin
+  - ssp     Special shell parameter
+- Type
+  - jobs    Job control
+  - nav     Navigation
+  - comp    Completion
+  - hist    Command-line history
+- Kind
+  - op      Operator
+  - kw      Keyword
+  - bb      Builtin
+  - pr      Program
+  - ev      Environment variable
+  - par     Shell Parameter
+
+
+
+- nav   Directory stack in bash
+- jobs  Job control in bash
+- comp  Programmable completions in bash
+- lang  Bash command language
+
+
+set: un/set shopts and positional parameters, change shell attributes and positional parameters, display shell variables.

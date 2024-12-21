@@ -1,0 +1,1101 @@
+# Emacs :: ELisp
+
+This is the GNU Emacs Lisp Reference Manual corresponding to Emacs version 29.2.
+https://www.gnu.org/software/emacs/manual/html_node/elisp/index.html
+
+## Short Table of Contents
+- 1 Introduction
+- 2 Lisp Data Types
+- 3 Numbers
+- 4 Strings and Characters
+- 5 Lists
+- 6 Sequences, Arrays, and Vectors
+- 7 Records
+- 8 Hash Tables
+- 9 Symbols
+- 10 Evaluation
+- 11 Control Structures
+- 12 Variables
+- 13 Functions
+- 14 Macros
+- 15 Customization Settings
+- 16 Loading
+- 17 Byte Compilation
+- 18 Compilation of Lisp to Native Code
+- 19 Debugging Lisp Programs
+- 20 Reading and Printing Lisp Objects
+- 21 Minibuffers
+- 22 Command Loop
+- 23 Keymaps
+- 24 Major and Minor Modes
+- 25 Documentation
+- 26 Files
+- 27 Backups and Auto-Saving
+- 28 Buffers
+- 29 Windows
+- 30 Frames
+- 31 Positions
+- 32 Markers
+- 33 Text
+- 34 Non-ASCII Characters
+- 35 Searching and Matching
+- 36 Syntax Tables
+- 37 Parsing Program Source
+- 38 Abbrevs and Abbrev Expansion
+- 39 Threads
+- 40 Processes
+- 41 Emacs Display
+- 42 Operating System Interface
+- 43 Preparing Lisp code for distribution
+- Appendix A Emacs 28 Antinews
+- Appendix B GNU Free Documentation License
+- Appendix C GNU General Public License
+- Appendix D Tips and Conventions
+- Appendix E GNU Emacs Internals
+- Appendix F Standard Errors
+- Appendix G Standard Keymaps
+- Appendix H Standard Hooks
+- Index
+
+
+## Table of Contents
+
+- 1. Introduction
+  - 1.1 Caveats
+  - 1.2 Lisp History
+  - 1.3 Conventions
+    - 1.3.1 Some Terms
+    - 1.3.2 nil and t
+    - 1.3.3 Evaluation Notation
+    - 1.3.4 Printing Notation
+    - 1.3.5 Error Messages
+    - 1.3.6 Buffer Text Notation
+    - 1.3.7 Format of Descriptions
+      - 1.3.7.1 A Sample Function Description
+      - 1.3.7.2 A Sample Variable Description
+  - 1.4 Version Information
+  - 1.5 Acknowledgments
+
+- [2. Lisp Data Types](./2-lisp-data-types.md)
+  - 2.1 Printed Representation and Read Syntax
+  - 2.2 Special Read Syntax
+  - 2.3 Comments
+  - 2.4 Programming Types
+    - 2.4.1 Integer Type
+    - 2.4.2 Floating-Point Type
+    - 2.4.3 Character Type
+      - 2.4.3.1 Basic Char Syntax
+      - 2.4.3.2 General Escape Syntax
+      - 2.4.3.3 Control-Character Syntax
+      - 2.4.3.4 Meta-Character Syntax
+      - 2.4.3.5 Other Character Modifier Bits
+    - 2.4.4 Symbol Type
+    - 2.4.5 Sequence Types
+    - 2.4.6 Cons Cell and List Types
+      - 2.4.6.1 Drawing Lists as Box Diagrams
+      - 2.4.6.2 Dotted Pair Notation
+      - 2.4.6.3 Association List Type
+    - 2.4.7 Array Type
+    - 2.4.8 String Type
+      - 2.4.8.1 Syntax for Strings
+      - 2.4.8.2 Non-ASCII Characters in Strings
+      - 2.4.8.3 Nonprinting Characters in Strings
+      - 2.4.8.4 Text Properties in Strings
+    - 2.4.9 Vector Type
+    - 2.4.10 Char-Table Type
+    - 2.4.11 Bool-Vector Type
+    - 2.4.12 Hash Table Type
+    - 2.4.13 Function Type
+    - 2.4.14 Macro Type
+    - 2.4.15 Primitive Function Type
+    - 2.4.16 Byte-Code Function Type
+    - 2.4.17 Record Type
+    - 2.4.18 Type Descriptors
+    - 2.4.19 Autoload Type
+    - 2.4.20 Finalizer Type
+  - 2.5 Editing Types
+    - 2.5.1 Buffer Type
+    - 2.5.2 Marker Type
+    - 2.5.3 Window Type
+    - 2.5.4 Frame Type
+    - 2.5.5 Terminal Type
+    - 2.5.6 Window Configuration Type
+    - 2.5.7 Frame Configuration Type
+    - 2.5.8 Process Type
+    - 2.5.9 Thread Type
+    - 2.5.10 Mutex Type
+    - 2.5.11 Condition Variable Type
+    - 2.5.12 Stream Type
+    - 2.5.13 Keymap Type
+    - 2.5.14 Overlay Type
+    - 2.5.15 Font Type
+    - 2.5.16 Xwidget Type
+  - 2.6 Read Syntax for Circular Objects
+  - 2.7 Type Predicates
+  - 2.8 Equality Predicates
+  - 2.9 Mutability
+
+- [3. Numbers](./3-numbers.md)
+  - 3.1 Integer Basics
+  - 3.2 Floating-Point Basics
+  - 3.3 Type Predicates for Numbers
+  - 3.4 Comparison of Numbers
+  - 3.5 Numeric Conversions
+  - 3.6 Arithmetic Operations
+  - 3.7 Rounding Operations
+  - 3.8 Bitwise Operations on Integers
+  - 3.9 Standard Mathematical Functions
+  - 3.10 Random Numbers
+
+- [4. Strings and Characters](./4-strings-and-characters.md)
+  - 4.1 String and Character Basics
+  - 4.2 Predicates for Strings
+  - 4.3 Creating Strings
+  - 4.4 Modifying Strings
+  - 4.5 Comparison of Characters and Strings
+  - 4.6 Conversion of Characters and Strings
+  - 4.7 Formatting Strings
+  - 4.8 Custom Format Strings
+  - 4.9 Case Conversion in Lisp
+  - 4.10 The Case Table
+
+- [5. Lists](./5-lists.md)
+  - 5.1 Lists and Cons Cells
+  - 5.2 Predicates on Lists
+  - 5.3 Accessing Elements of Lists
+  - 5.4 Building Cons Cells and Lists
+  - 5.5 Modifying List Variables
+  - 5.6 Modifying Existing List Structure
+    - 5.6.1 Altering List Elements with setcar
+    - 5.6.2 Altering the CDR of a List
+    - 5.6.3 Functions that Rearrange Lists
+  - 5.7 Using Lists as Sets
+  - 5.8 Association Lists
+  - 5.9 Property Lists
+    - 5.9.1 Property Lists and Association Lists
+    - 5.9.2 Property Lists Outside Symbols
+
+- [6. Sequences, Arrays and Vectors](./6-sequences.md)
+  - 6.1 Sequences
+  - 6.2 Arrays
+  - 6.3 Functions that Operate on Arrays
+  - 6.4 Vectors
+  - 6.5 Functions for Vectors
+  - 6.6 Char-Tables
+  - 6.7 Bool-vectors
+  - 6.8 Managing a Fixed-Size Ring of Objects
+
+- [7. Records](./7-records.md)
+  - 7.1 Record Functions
+  - 7.2 Backward Compatibility
+
+- [8. Hash Tables](./8-hash-tables.md)
+  - 8.1 Creating Hash Tables
+  - 8.2 Hash Table Access
+  - 8.3 Defining Hash Comparisons
+  - 8.4 Other Hash Table Functions
+
+- [9. Symbols](./9-symbols.md)
+  - 9.1 Symbol Components
+  - 9.2 Defining Symbols
+  - 9.3 Creating and Interning Symbols
+  - 9.4 Symbol Properties
+    - 9.4.1 Accessing Symbol Properties
+    - 9.4.2 Standard Symbol Properties
+  - 9.5 Shorthands
+    - 9.5.1 Exceptions
+  - 9.6 Symbols with Position
+
+- [10. Evaluation](./10-evaluation.md)
+  - 10.1 Introduction to Evaluation
+  - 10.2 Kinds of Forms
+    - 10.2.1 Self-Evaluating Forms
+    - 10.2.2 Symbol Forms
+    - 10.2.3 Classification of List Forms
+    - 10.2.4 Symbol Function Indirection
+    - 10.2.5 Evaluation of Function Forms
+    - 10.2.6 Lisp Macro Evaluation
+    - 10.2.7 Special Forms
+    - 10.2.8 Autoloading
+  - 10.3 Quoting
+  - 10.4 Backquote
+  - 10.5 Eval
+  - 10.6 Deferred and Lazy Evaluation
+
+- [11. Control Structures](./11-control-structures.md)
+  - 11.1 Sequencing
+  - 11.2 Conditionals
+  - 11.3 Constructs for Combining Conditions
+  - 11.4 Pattern-Matching Conditional
+    - 11.4.1 The pcase macro
+    - 11.4.2 Extending pcase
+    - 11.4.3 Backquote-Style Patterns
+    - 11.4.4 Destructuring with pcase Patterns
+  - 11.5 Iteration
+  - 11.6 Generators
+  - 11.7 Nonlocal Exits
+    - 11.7.1 Explicit Nonlocal Exits: catch and throw
+    - 11.7.2 Examples of catch and throw
+    - 11.7.3 Errors
+      - 11.7.3.1 How to Signal an Error
+      - 11.7.3.2 How Emacs Processes Errors
+      - 11.7.3.3 Writing Code to Handle Errors
+      - 11.7.3.4 Error Symbols and Condition Names
+    - 11.7.4 Cleaning Up from Nonlocal Exits
+
+- [12. Variables](./12-variables.md)
+  - 12.1 Global Variables
+  - 12.2 Variables that Never Change
+  - 12.3 Local Variables
+  - 12.4 When a Variable is Void
+  - 12.5 Defining Global Variables
+  - 12.6 Tips for Defining Variables Robustly
+  - 12.7 Accessing Variable Values
+  - 12.8 Setting Variable Values
+  - 12.9 Running a function when a variable is changed.
+    - 12.9.1 Limitations
+  - 12.10 Scoping Rules for Variable Bindings
+    - 12.10.1 Dynamic Binding
+    - 12.10.2 Proper Use of Dynamic Binding
+    - 12.10.3 Lexical Binding
+    - 12.10.4 Using Lexical Binding
+    - 12.10.5 Converting to Lexical Binding
+  - 12.11 Buffer-Local Variables
+    - 12.11.1 Introduction to Buffer-Local Variables
+    - 12.11.2 Creating and Deleting Buffer-Local Bindings
+    - 12.11.3 The Default Value of a Buffer-Local Variable
+  - 12.12 File Local Variables
+  - 12.13 Directory Local Variables
+  - 12.14 Connection Local Variables
+    - 12.14.1 Connection Local Profiles
+    - 12.14.2 Applying Connection Local Variables
+  - 12.15 Variable Aliases
+  - 12.16 Variables with Restricted Values
+  - 12.17 Generalized Variables
+    - 12.17.1 The setf Macro
+    - 12.17.2 Defining new setf forms
+  - 12.18 Multisession Variables
+
+- [13. Functions](./13-functions.md)
+  - 13.1 What Is a Function?
+  - 13.2 Lambda Expressions
+    - 13.2.1 Components of a Lambda Expression
+    - 13.2.2 A Simple Lambda Expression Example
+    - 13.2.3 Features of Argument Lists
+    - 13.2.4 Documentation Strings of Functions
+  - 13.3 Naming a Function
+  - 13.4 Defining Functions
+  - 13.5 Calling Functions
+  - 13.6 Mapping Functions
+  - 13.7 Anonymous Functions
+  - 13.8 Generic Functions
+  - 13.9 Accessing Function Cell Contents
+  - 13.10 Closures
+  - 13.11 Open Closures
+  - 13.12 Advising Emacs Lisp Functions
+    - 13.12.1 Primitives to manipulate advices
+    - 13.12.2 Advising Named Functions
+    - 13.12.3 Ways to compose advice
+    - 13.12.4 Adapting code using the old defadvice
+    - 13.12.5 Advice and Byte Code
+  - 13.13 Declaring Functions Obsolete
+  - 13.14 Inline Functions
+  - 13.15 The declare Form
+  - 13.16 Telling the Compiler that a Function is Defined
+  - 13.17 Determining whether a Function is Safe to Call
+  - 13.18 Other Topics Related to Functions
+
+- [14. Macros](./14-macros.md)
+  - 14.1 A Simple Example of a Macro
+  - 14.2 Expansion of a Macro Call
+  - 14.3 Macros and Byte Compilation
+  - 14.4 Defining Macros
+  - 14.5 Common Problems Using Macros
+    - 14.5.1 Wrong Time
+    - 14.5.2 Evaluating Macro Arguments Repeatedly
+    - 14.5.3 Local Variables in Macro Expansions
+    - 14.5.4 Evaluating Macro Arguments in Expansion
+    - 14.5.5 How Many Times is the Macro Expanded?
+  - 14.6 Indenting Macros
+
+- 15. Customization Settings
+  - 15.1 Common Item Keywords
+  - 15.2 Defining Customization Groups
+  - 15.3 Defining Customization Variables
+  - 15.4 Customization Types
+    - 15.4.1 Simple Types
+    - 15.4.2 Composite Types
+    - 15.4.3 Splicing into Lists
+    - 15.4.4 Type Keywords
+    - 15.4.5 Defining New Types
+  - 15.5 Applying Customizations
+  - 15.6 Custom Themes
+
+- 16. Loading
+  - 16.1 How Programs Do Loading
+  - 16.2 Load Suffixes
+  - 16.3 Library Search
+  - 16.4 Loading Non-ASCII Characters
+  - 16.5 Autoload
+    - 16.5.1 Autoload by Prefix
+    - 16.5.2 When to Use Autoload
+  - 16.6 Repeated Loading
+  - 16.7 Features
+  - 16.8 Which File Defined a Certain Symbol
+  - 16.9 Unloading
+  - 16.10 Hooks for Loading
+  - 16.11 Emacs Dynamic Modules
+
+- 17. Byte Compilation
+  - 17.1 Performance of Byte-Compiled Code
+  - 17.2 Byte-Compilation Functions
+  - 17.3 Documentation Strings and Compilation
+  - 17.4 Dynamic Loading of Individual Functions
+  - 17.5 Evaluation During Compilation
+  - 17.6 Compiler Errors
+  - 17.7 Byte-Code Function Objects
+  - 17.8 Disassembled Byte-Code
+
+- 18. Compilation of Lisp to Native Code
+  - 18.1 Native-Compilation Functions
+  - 18.2 Native-Compilation Variables
+
+- 19. Debugging Lisp Programs
+  - 19.1 The Lisp Debugger
+    - 19.1.1 Entering the Debugger on an Error
+    - 19.1.2 Debugging Redisplay Errors
+    - 19.1.3 Debugging Infinite Loops
+    - 19.1.4 Entering the Debugger on a Function Call
+    - 19.1.5 Entering the debugger when a variable is modified
+    - 19.1.6 Explicit Entry to the Debugger
+    - 19.1.7 Using the Debugger
+    - 19.1.8 Backtraces
+    - 19.1.9 Debugger Commands
+    - 19.1.10 Invoking the Debugger
+    - 19.1.11 Internals of the Debugger
+  - 19.2 Edebug
+    - 19.2.1 Using Edebug
+    - 19.2.2 Instrumenting for Edebug
+    - 19.2.3 Edebug Execution Modes
+    - 19.2.4 Jumping
+    - 19.2.5 Miscellaneous Edebug Commands
+    - 19.2.6 Breaks
+      - 19.2.6.1 Edebug Breakpoints
+      - 19.2.6.2 Global Break Condition
+      - 19.2.6.3 Source Breakpoints
+    - 19.2.7 Trapping Errors
+    - 19.2.8 Edebug Views
+    - 19.2.9 Evaluation
+    - 19.2.10 Evaluation List Buffer
+    - 19.2.11 Printing in Edebug
+    - 19.2.12 Trace Buffer
+    - 19.2.13 Coverage Testing
+    - 19.2.14 The Outside Context
+      - 19.2.14.1 Checking Whether to Stop
+      - 19.2.14.2 Edebug Display Update
+      - 19.2.14.3 Edebug Recursive Edit
+    - 19.2.15 Edebug and Macros
+      - 19.2.15.1 Instrumenting Macro Calls
+      - 19.2.15.2 Specification List
+      - 19.2.15.3 Backtracking in Specifications
+      - 19.2.15.4 Specification Examples
+    - 19.2.16 Edebug Options
+  - 19.3 Debugging Invalid Lisp Syntax
+    - 19.3.1 Excess Open Parentheses
+    - 19.3.2 Excess Close Parentheses
+  - 19.4 Test Coverage
+  - 19.5 Profiling
+
+- 20. Reading and Printing Lisp Objects
+  - 20.1 Introduction to Reading and Printing
+  - 20.2 Input Streams
+  - 20.3 Input Functions
+  - 20.4 Output Streams
+  - 20.5 Output Functions
+  - 20.6 Variables Affecting Output
+  - 20.7 Overriding Output Variables
+
+- 21. Minibuffers
+  - 21.1 Introduction to Minibuffers
+  - 21.2 Reading Text Strings with the Minibuffer
+  - 21.3 Reading Lisp Objects with the Minibuffer
+  - 21.4 Minibuffer History
+  - 21.5 Initial Input
+  - 21.6 Completion
+    - 21.6.1 Basic Completion Functions
+    - 21.6.2 Completion and the Minibuffer
+    - 21.6.3 Minibuffer Commands that Do Completion
+    - 21.6.4 High-Level Completion Functions
+    - 21.6.5 Reading File Names
+    - 21.6.6 Completion Variables
+    - 21.6.7 Programmed Completion
+    - 21.6.8 Completion in Ordinary Buffers
+  - 21.7 Yes-or-No Queries
+  - 21.8 Asking Multiple-Choice Questions
+  - 21.9 Reading a Password
+  - 21.10 Minibuffer Commands
+  - 21.11 Minibuffer Windows
+  - 21.12 Minibuffer Contents
+  - 21.13 Recursive Minibuffers
+  - 21.14 Inhibiting Interaction
+  - 21.15 Minibuffer Miscellany
+
+- 22. Command Loop
+  - 22.1 Command Loop Overview
+  - 22.2 Defining Commands
+    - 22.2.1 Using interactive
+    - 22.2.2 Code Characters for interactive
+    - 22.2.3 Examples of Using interactive
+    - 22.2.4 Specifying Modes For Commands
+    - 22.2.5 Select among Command Alternatives
+  - 22.3 Interactive Call
+  - 22.4 Distinguish Interactive Calls
+  - 22.5 Information from the Command Loop
+  - 22.6 Adjusting Point After Commands
+  - 22.7 Input Events
+    - 22.7.1 Keyboard Events
+    - 22.7.2 Function Keys
+    - 22.7.3 Mouse Events
+    - 22.7.4 Click Events
+    - 22.7.5 Drag Events
+    - 22.7.6 Button-Down Events
+    - 22.7.7 Repeat Events
+    - 22.7.8 Motion Events
+    - 22.7.9 Touchscreen Events
+    - 22.7.10 Focus Events
+    - 22.7.11 Xwidget events
+    - 22.7.12 Miscellaneous System Events
+    - 22.7.13 Event Examples
+    - 22.7.14 Classifying Events
+    - 22.7.15 Accessing Mouse Events
+    - 22.7.16 Accessing Scroll Bar Events
+    - 22.7.17 Putting Keyboard Events in Strings
+  - 22.8 Reading Input
+    - 22.8.1 Key Sequence Input
+    - 22.8.2 Reading One Event
+    - 22.8.3 Modifying and Translating Input Events
+    - 22.8.4 Invoking the Input Method
+    - 22.8.5 Quoted Character Input
+    - 22.8.6 Miscellaneous Event Input Features
+  - 22.9 Special Events
+  - 22.10 Waiting for Elapsed Time or Input
+  - 22.11 Quitting
+  - 22.12 Prefix Command Arguments
+  - 22.13 Recursive Editing
+  - 22.14 Disabling Commands
+  - 22.15 Command History
+  - 22.16 Keyboard Macros
+
+- 23. Keymaps
+  - 23.1 Key Sequences
+  - 23.2 Keymap Basics
+  - 23.3 Format of Keymaps
+  - 23.4 Creating Keymaps
+  - 23.5 Inheritance and Keymaps
+  - 23.6 Prefix Keys
+  - 23.7 Active Keymaps
+  - 23.8 Searching the Active Keymaps
+  - 23.9 Controlling the Active Keymaps
+  - 23.10 Key Lookup
+  - 23.11 Functions for Key Lookup
+  - 23.12 Changing Key Bindings
+  - 23.13 Low-Level Key Binding
+  - 23.14 Remapping Commands
+  - 23.15 Keymaps for Translating Sequences of Events
+    - 23.15.1 Interaction with normal keymaps
+  - 23.16 Commands for Binding Keys
+  - 23.17 Scanning Keymaps
+  - 23.18 Menu Keymaps
+    - 23.18.1 Defining Menus
+      - 23.18.1.1 Simple Menu Items
+      - 23.18.1.2 Extended Menu Items
+      - 23.18.1.3 Menu Separators
+      - 23.18.1.4 Alias Menu Items
+    - 23.18.2 Menus and the Mouse
+    - 23.18.3 Menus and the Keyboard
+    - 23.18.4 Menu Example
+    - 23.18.5 The Menu Bar
+    - 23.18.6 Tool bars
+    - 23.18.7 Modifying Menus
+    - 23.18.8 Easy Menu
+
+- 24. Major and Minor Modes
+  - 24.1 Hooks
+    - 24.1.1 Running Hooks
+    - 24.1.2 Setting Hooks
+  - 24.2 Major Modes
+    - 24.2.1 Major Mode Conventions
+    - 24.2.2 How Emacs Chooses a Major Mode
+    - 24.2.3 Getting Help about a Major Mode
+    - 24.2.4 Defining Derived Modes
+    - 24.2.5 Basic Major Modes
+    - 24.2.6 Mode Hooks
+    - 24.2.7 Tabulated List mode
+    - 24.2.8 Generic Modes
+    - 24.2.9 Major Mode Examples
+  - 24.3 Minor Modes
+    - 24.3.1 Conventions for Writing Minor Modes
+    - 24.3.2 Keymaps and Minor Modes
+    - 24.3.3 Defining Minor Modes
+  - 24.4 Mode Line Format
+    - 24.4.1 Mode Line Basics
+    - 24.4.2 The Data Structure of the Mode Line
+    - 24.4.3 The Top Level of Mode Line Control
+    - 24.4.4 Variables Used in the Mode Line
+    - 24.4.5 %-Constructs in the Mode Line
+    - 24.4.6 Properties in the Mode Line
+    - 24.4.7 Window Header Lines
+    - 24.4.8 Emulating Mode Line Formatting
+  - 24.5 Imenu
+  - 24.6 Font Lock Mode
+    - 24.6.1 Font Lock Basics
+    - 24.6.2 Search-based Fontification
+    - 24.6.3 Customizing Search-Based Fontification
+    - 24.6.4 Other Font Lock Variables
+    - 24.6.5 Levels of Font Lock
+    - 24.6.6 Precalculated Fontification
+    - 24.6.7 Faces for Font Lock
+    - 24.6.8 Syntactic Font Lock
+    - 24.6.9 Multiline Font Lock Constructs
+      - 24.6.9.1 Font Lock Multiline
+      - 24.6.9.2 Region to Fontify after a Buffer Change
+    - 24.6.10 Parser-based Font Lock
+  - 24.7 Automatic Indentation of code
+    - 24.7.1 Simple Minded Indentation Engine
+      - 24.7.1.1 SMIE Setup and Features
+      - 24.7.1.2 Operator Precedence Grammars
+      - 24.7.1.3 Defining the Grammar of a Language
+      - 24.7.1.4 Defining Tokens
+      - 24.7.1.5 Living With a Weak Parser
+      - 24.7.1.6 Specifying Indentation Rules
+      - 24.7.1.7 Helper Functions for Indentation Rules
+      - 24.7.1.8 Sample Indentation Rules
+      - 24.7.1.9 Customizing Indentation
+    - 24.7.2 Parser-based Indentation
+  - 24.8 Desktop Save Mode
+
+- 25. Documentation
+  - 25.1 Documentation Basics
+  - 25.2 Access to Documentation Strings
+  - 25.3 Substituting Key Bindings in Documentation
+  - 25.4 Text Quoting Style
+  - 25.5 Describing Characters for Help Messages
+  - 25.6 Help Functions
+  - 25.7 Documentation Groups
+
+- 26. Files
+  - 26.1 Visiting Files
+  - 26.1.1 Functions for Visiting Files
+  - 26.1.2 Subroutines of Visiting
+  - 26.2 Saving Buffers
+  - 26.3 Reading from Files
+  - 26.4 Writing to Files
+  - 26.5 File Locks
+  - 26.6 Information about Files
+  - 26.6.1 Testing Accessibility
+  - 26.6.2 Distinguishing Kinds of Files
+  - 26.6.3 Truenames
+  - 26.6.4 File Attributes
+  - 26.6.5 Extended File Attributes
+  - 26.6.6 Locating Files in Standard Places
+  - 26.7 Changing File Names and Attributes
+  - 26.8 Files and Secondary Storage
+  - 26.9 File Names
+  - 26.9.1 File Name Components
+  - 26.9.2 Absolute and Relative File Names
+  - 26.9.3 Directory Names
+  - 26.9.4 Functions that Expand Filenames
+  - 26.9.5 Generating Unique File Names
+  - 26.9.6 File Name Completion
+  - 26.9.7 Standard File Names
+  - 26.10 Contents of Directories
+  - 26.11 Creating, Copying and Deleting Directories
+  - 26.12 Making Certain File Names "Magic"
+  - 26.13 File Format Conversion
+  - 26.13.1 Overview
+  - 26.13.2 Round-Trip Specification
+  - 26.13.3 Piecemeal Specification
+
+- 27. Backups and Auto-Saving
+  - 27.1 Backup Files
+  - 27.1.1 Making Backup Files
+  - 27.1.2 Backup by Renaming or by Copying?
+  - 27.1.3 Making and Deleting Numbered Backup Files
+  - 27.1.4 Naming Backup Files
+  - 27.2 Auto-Saving
+  - 27.3 Reverting
+
+- 28. Buffers
+  - 28.1 Buffer Basics
+  - 28.2 The Current Buffer
+  - 28.3 Buffer Names
+  - 28.4 Buffer File Name
+  - 28.5 Buffer Modification
+  - 28.6 Buffer Modification Time
+  - 28.7 Read-Only Buffers
+  - 28.8 The Buffer List
+  - 28.9 Creating Buffers
+  - 28.10 Killing Buffers
+  - 28.11 Indirect Buffers
+  - 28.12 Swapping Text Between Two Buffers
+  - 28.13 The Buffer Gap
+
+- 29. Windows
+  - 29.1 Basic Concepts of Emacs Windows
+  - 29.2 Windows and Frames
+  - 29.3 Selecting Windows
+  - 29.4 Window Sizes
+  - 29.5 Resizing Windows
+  - 29.6 Preserving Window Sizes
+  - 29.7 Splitting Windows
+  - 29.8 Deleting Windows
+  - 29.9 Recombining Windows
+  - 29.10 Cyclic Ordering of Windows
+  - 29.11 Buffers and Windows
+  - 29.12 Switching to a Buffer in a Window
+  - 29.13 Displaying a Buffer in a Suitable Window
+  - 29.13.1 Choosing a Window for Displaying a Buffer
+  - 29.13.2 Action Functions for Buffer Display
+  - 29.13.3 Action Alists for Buffer Display
+  - 29.13.4 Additional Options for Displaying Buffers
+  - 29.13.5 Precedence of Action Functions
+  - 29.13.6 The Zen of Buffer Display
+  - 29.14 Window History
+  - 29.15 Dedicated Windows
+  - 29.16 Quitting Windows
+  - 29.17 Side Windows
+  - 29.17.1 Displaying Buffers in Side Windows
+  - 29.17.2 Side Window Options and Functions
+  - 29.17.3 Frame Layouts with Side Windows
+  - 29.18 Atomic Windows
+  - 29.19 Windows and Point
+  - 29.20 The Window Start and End Positions
+  - 29.21 Textual Scrolling
+  - 29.22 Vertical Fractional Scrolling
+  - 29.23 Horizontal Scrolling
+  - 29.24 Coordinates and Windows
+  - 29.25 Mouse Window Auto-selection
+  - 29.26 Window Configurations
+  - 29.27 Window Parameters
+  - 29.28 Hooks for Window Scrolling and Changes
+
+- 30. Frames
+  - 30.1 Creating Frames
+  - 30.2 Multiple Terminals
+  - 30.3 Frame Geometry
+  - 30.3.1 Frame Layout
+  - 30.3.2 Frame Font
+  - 30.3.3 Frame Position
+  - 30.3.4 Frame Size
+  - 30.3.5 Implied Frame Resizing
+  - 30.4 Frame Parameters
+  - 30.4.1 Access to Frame Parameters
+  - 30.4.2 Initial Frame Parameters
+  - 30.4.3 Window Frame Parameters
+  - 30.4.3.1 Basic Parameters
+  - 30.4.3.2 Position Parameters
+  - 30.4.3.3 Size Parameters
+  - 30.4.3.4 Layout Parameters
+  - 30.4.3.5 Buffer Parameters
+  - 30.4.3.6 Frame Interaction Parameters
+  - 30.4.3.7 Mouse Dragging Parameters
+  - 30.4.3.8 Window Management Parameters
+  - 30.4.3.9 Cursor Parameters
+  - 30.4.3.10 Font and Color Parameters
+  - 30.4.4 Geometry
+  - 30.5 Terminal Parameters
+  - 30.6 Frame Titles
+  - 30.7 Deleting Frames
+  - 30.8 Finding All Frames
+  - 30.9 Minibuffers and Frames
+  - 30.10 Input Focus
+  - 30.11 Visibility of Frames
+  - 30.12 Raising, Lowering and Restacking Frames
+  - 30.13 Frame Configurations
+  - 30.14 Child Frames
+  - 30.15 Mouse Tracking
+  - 30.16 Mouse Position
+  - 30.17 Pop-Up Menus
+  - 30.18 Dialog Boxes
+  - 30.19 Pointer Shape
+  - 30.20 Window System Selections
+  - 30.21 Yanking Media
+  - 30.22 Drag and Drop
+  - 30.23 Color Names
+  - 30.24 Text Terminal Colors
+  - 30.25 X Resources
+  - 30.26 Display Feature Testing
+
+- 31. Positions
+  - 31.1 Point
+  - 31.2 Motion
+  - 31.2.1 Motion by Characters
+  - 31.2.2 Motion by Words
+  - 31.2.3 Motion to an End of the Buffer
+  - 31.2.4 Motion by Text Lines
+  - 31.2.5 Motion by Screen Lines
+  - 31.2.6 Moving over Balanced Expressions
+  - 31.2.7 Skipping Characters
+  - 31.3 Excursions
+  - 31.4 Narrowing
+
+- 32. Markers
+  - 32.1 Overview of Markers
+  - 32.2 Predicates on Markers
+  - 32.3 Functions that Create Markers
+  - 32.4 Information from Markers
+  - 32.5 Marker Insertion Types
+  - 32.6 Moving Marker Positions
+  - 32.7 The Mark
+  - 32.8 The Region
+
+- 33. Text
+  - 33.1 Examining Text Near Point
+  - 33.2 Examining Buffer Contents
+  - 33.3 Comparing Text
+  - 33.4 Inserting Text
+  - 33.5 User-Level Insertion Commands
+  - 33.6 Deleting Text
+  - 33.7 User-Level Deletion Commands
+  - 33.8 The Kill Ring
+  - 33.8.1 Kill Ring Concepts
+  - 33.8.2 Functions for Killing
+  - 33.8.3 Yanking
+  - 33.8.4 Functions for Yanking
+  - 33.8.5 Low-Level Kill Ring
+  - 33.8.6 Internals of the Kill Ring
+  - 33.9 Undo
+  - 33.10 Maintaining Undo Lists
+  - 33.11 Filling
+  - 33.12 Margins for Filling
+  - 33.13 Adaptive Fill Mode
+  - 33.14 Auto Filling
+  - 33.15 Sorting Text
+  - 33.16 Counting Columns
+  - 33.17 Indentation
+  - 33.17.1 Indentation Primitives
+  - 33.17.2 Indentation Controlled by Major Mode
+  - 33.17.3 Indenting an Entire Region
+  - 33.17.4 Indentation Relative to Previous Lines
+  - 33.17.5 Adjustable Tab Stops
+  - 33.17.6 Indentation-Based Motion Commands
+  - 33.18 Case Changes
+  - 33.19 Text Properties
+  - 33.19.1 Examining Text Properties
+  - 33.19.2 Changing Text Properties
+  - 33.19.3 Text Property Search Functions
+  - 33.19.4 Properties with Special Meanings
+  - 33.19.5 Formatted Text Properties
+  - 33.19.6 Stickiness of Text Properties
+  - 33.19.7 Lazy Computation of Text Properties
+  - 33.19.8 Defining Clickable Text
+  - 33.19.9 Defining and Using Fields
+  - 33.19.10 Why Text Properties are not Intervals
+  - 33.20 Substituting for a Character Code
+  - 33.21 Registers
+  - 33.22 Transposition of Text
+  - 33.23 Replacing Buffer Text
+  - 33.24 Dealing With Compressed Data
+  - 33.25 Base 64 Encoding
+  - 33.26 Checksum/Hash
+  - 33.27 Suspicious Text
+  - 33.28 GnuTLS Cryptography
+  - 33.28.1 Format of GnuTLS Cryptography Inputs
+  - 33.28.2 GnuTLS Cryptographic Functions
+  - 33.29 Database
+  - 33.30 Parsing HTML and XML
+  - 33.30.1 Document Object Model
+  - 33.31 Parsing and generating JSON values
+  - 33.32 JSONRPC communication
+  - 33.32.1 Overview
+  - 33.32.2 Process-based JSONRPC connections
+  - 33.32.3 JSONRPC JSON object format
+  - 33.32.4 Deferred JSONRPC requests
+  - 33.33 Atomic Change Groups
+  - 33.34 Change Hooks
+
+- 34. Non-ASCII Characters
+  - 34.1 Text Representations
+  - 34.2 Disabling Multibyte Characters
+  - 34.3 Converting Text Representations
+  - 34.4 Selecting a Representation
+  - 34.5 Character Codes
+  - 34.6 Character Properties
+  - 34.7 Character Sets
+  - 34.8 Scanning for Character Sets
+  - 34.9 Translation of Characters
+  - 34.10 Coding Systems
+  - 34.10.1 Basic Concepts of Coding Systems
+  - 34.10.2 Encoding and I/O
+  - 34.10.3 Coding Systems in Lisp
+  - 34.10.4 User-Chosen Coding Systems
+  - 34.10.5 Default Coding Systems
+  - 34.10.6 Specifying a Coding System for One Operation
+  - 34.10.7 Explicit Encoding and Decoding
+  - 34.10.8 Terminal I/O Encoding
+  - 34.11 Input Methods
+  - 34.12 Locales
+
+- 35. Searching and Matching
+  - 35.1 Searching for Strings
+  - 35.2 Searching and Case
+  - 35.3 Regular Expressions
+  - 35.3.1 Syntax of Regular Expressions
+  - 35.3.1.1 Special Characters in Regular Expressions
+  - 35.3.1.2 Character Classes
+  - 35.3.1.3 Backslash Constructs in Regular Expressions
+  - 35.3.2 Complex Regexp Example
+  - 35.3.3 The rx Structured Regexp Notation
+  - 35.3.3.1 Constructs in rx regexps
+  - 35.3.3.2 Functions and macros using rx regexps
+  - 35.3.3.3 Defining new rx forms
+  - 35.3.4 Regular Expression Functions
+  - 35.3.5 Problems with Regular Expressions
+  - 35.4 Regular Expression Searching
+  - 35.5 POSIX Regular Expression Searching
+  - 35.6 The Match Data
+  - 35.6.1 Replacing the Text that Matched
+  - 35.6.2 Simple Match Data Access
+  - 35.6.3 Accessing the Entire Match Data
+  - 35.6.4 Saving and Restoring the Match Data
+  - 35.7 Search and Replace
+  - 35.8 Standard Regular Expressions Used in Editing
+
+- 36. Syntax Tables
+  - 36.1 Syntax Table Concepts
+  - 36.2 Syntax Descriptors
+  - 36.2.1 Table of Syntax Classes
+  - 36.2.2 Syntax Flags
+  - 36.3 Syntax Table Functions
+  - 36.4 Syntax Properties
+  - 36.5 Motion and Syntax
+  - 36.6 Parsing Expressions
+  - 36.6.1 Motion Commands Based on Parsing
+  - 36.6.2 Finding the Parse State for a Position
+  - 36.6.3 Parser State
+  - 36.6.4 Low-Level Parsing
+  - 36.6.5 Parameters to Control Parsing
+  - 36.7 Syntax Table Internals
+  - 36.8 Categories
+
+- 37. Parsing Program Source
+  - 37.1 Tree-sitter Language Grammar
+  - 37.2 Using Tree-sitter Parser
+  - 37.3 Retrieving Nodes
+  - 37.4 Accessing Node Information
+  - 37.5 Pattern Matching Tree-sitter Nodes
+  - 37.6 Parsing Text in Multiple Languages
+  - 37.7 Developing major modes with tree-sitter
+  - 37.8 Tree-sitter C API Correspondence
+
+- 38. Abbrevs and Abbrev Expansion
+  - 38.1 Abbrev Tables
+  - 38.2 Defining Abbrevs
+  - 38.3 Saving Abbrevs in Files
+  - 38.4 Looking Up and Expanding Abbreviations
+  - 38.5 Standard Abbrev Tables
+  - 38.6 Abbrev Properties
+  - 38.7 Abbrev Table Properties
+
+- 39. Threads
+  - 39.1 Basic Thread Functions
+  - 39.2 Mutexes
+  - 39.3 Condition Variables
+  - 39.4 The Thread List
+
+- 40. Processes
+  - 40.1 Functions that Create Subprocesses
+  - 40.2 Shell Arguments
+  - 40.3 Creating a Synchronous Process
+  - 40.4 Creating an Asynchronous Process
+  - 40.5 Deleting Processes
+  - 40.6 Process Information
+  - 40.7 Sending Input to Processes
+  - 40.8 Sending Signals to Processes
+  - 40.9 Receiving Output from Processes
+  - 40.9.1 Process Buffers
+  - 40.9.2 Process Filter Functions
+  - 40.9.3 Decoding Process Output
+  - 40.9.4 Accepting Output from Processes
+  - 40.9.5 Processes and Threads
+  - 40.10 Sentinels: Detecting Process Status Changes
+  - 40.11 Querying Before Exit
+  - 40.12 Accessing Other Processes
+  - 40.13 Transaction Queues
+  - 40.14 Network Connections
+  - 40.15 Network Servers
+  - 40.16 Datagrams
+  - 40.17 Low-Level Network Access
+  - 40.17.1 make-network-process
+  - 40.17.2 Network Options
+  - 40.17.3 Testing Availability of Network Features
+  - 40.18 Misc Network Facilities
+  - 40.19 Communicating with Serial Ports
+  - 40.20 Packing and Unpacking Byte Arrays
+  - 40.20.1 Describing Data Layout
+  - 40.20.2 Functions to Unpack and Pack Bytes
+  - 40.20.3 Advanced data layout specifications
+
+- 41. Emacs Display
+  - 41.1 Refreshing the Screen
+  - 41.2 Forcing Redisplay
+  - 41.3 Truncation
+  - 41.4 The Echo Area
+  - 41.4.1 Displaying Messages in the Echo Area
+  - 41.4.2 Reporting Operation Progress
+  - 41.4.3 Logging Messages in *Messages*
+  - 41.4.4 Echo Area Customization
+  - 41.5 Reporting Warnings
+  - 41.5.1 Warning Basics
+  - 41.5.2 Warning Variables
+  - 41.5.3 Warning Options
+  - 41.5.4 Delayed Warnings
+  - 41.6 Invisible Text
+  - 41.7 Selective Display
+  - 41.8 Temporary Displays
+  - 41.9 Overlays
+  - 41.9.1 Managing Overlays
+  - 41.9.2 Overlay Properties
+  - 41.9.3 Searching for Overlays
+  - 41.10 Size of Displayed Text
+  - 41.11 Line Height
+  - 41.12 Faces
+  - 41.12.1 Face Attributes
+  - 41.12.2 Defining Faces
+  - 41.12.3 Face Attribute Functions
+  - 41.12.4 Displaying Faces
+  - 41.12.5 Face Remapping
+  - 41.12.6 Functions for Working with Faces
+  - 41.12.7 Automatic Face Assignment
+  - 41.12.8 Basic Faces
+  - 41.12.9 Font Selection
+  - 41.12.10 Looking Up Fonts
+  - 41.12.11 Fontsets
+  - 41.12.12 Low-Level Font Representation
+  - 41.13 Fringes
+  - 41.13.1 Fringe Size and Position
+  - 41.13.2 Fringe Indicators
+  - 41.13.3 Fringe Cursors
+  - 41.13.4 Fringe Bitmaps
+  - 41.13.5 Customizing Fringe Bitmaps
+  - 41.13.6 The Overlay Arrow
+  - 41.14 Scroll Bars
+  - 41.15 Window Dividers
+  - 41.16 The display Property
+  - 41.16.1 Display Specs That Replace The Text
+  - 41.16.2 Specified Spaces
+  - 41.16.3 Pixel Specification for Spaces
+  - 41.16.4 Other Display Specifications
+  - 41.16.5 Displaying in the Margins
+  - 41.17 Images
+  - 41.17.1 Image Formats
+  - 41.17.2 Image Descriptors
+  - 41.17.3 XBM Images
+  - 41.17.4 XPM Images
+  - 41.17.5 ImageMagick Images
+  - 41.17.6 SVG Images
+  - 41.17.7 Other Image Types
+  - 41.17.8 Defining Images
+  - 41.17.9 Showing Images
+  - 41.17.10 Multi-Frame Images
+  - 41.17.11 Image Cache
+  - 41.18 Icons
+  - 41.19 Embedded Native Widgets
+  - 41.20 Buttons
+  - 41.20.1 Button Properties
+  - 41.20.2 Button Types
+  - 41.20.3 Making Buttons
+  - 41.20.4 Manipulating Buttons
+  - 41.20.5 Button Buffer Commands
+  - 41.21 Abstract Display
+  - 41.21.1 Abstract Display Functions
+  - 41.21.2 Abstract Display Example
+  - 41.22 Blinking Parentheses
+  - 41.23 Character Display
+  - 41.23.1 Usual Display Conventions
+  - 41.23.2 Display Tables
+  - 41.23.3 Active Display Table
+  - 41.23.4 Glyphs
+  - 41.23.5 Glyphless Character Display
+  - 41.24 Beeping
+  - 41.25 Window Systems
+  - 41.26 Tooltips
+  - 41.27 Bidirectional Display
+
+- 42. Operating System Interface
+  - 42.1 Starting Up Emacs
+  - 42.1.1 Summary: Sequence of Actions at Startup
+  - 42.1.2 The Init File
+  - 42.1.3 Terminal-Specific Initialization
+  - 42.1.4 Command-Line Arguments
+  - 42.2 Getting Out of Emacs
+  - 42.2.1 Killing Emacs
+  - 42.2.2 Suspending Emacs
+  - 42.3 Operating System Environment
+  - 42.4 User Identification
+  - 42.5 Time of Day
+  - 42.6 Time Zone Rules
+  - 42.7 Time Conversion
+  - 42.8 Parsing and Formatting Times
+  - 42.9 Processor Run time
+  - 42.10 Time Calculations
+  - 42.11 Timers for Delayed Execution
+  - 42.12 Idle Timers
+  - 42.13 Terminal Input
+  - 42.13.1 Input Modes
+  - 42.13.2 Recording Input
+  - 42.14 Terminal Output
+  - 42.15 Sound Output
+  - 42.16 Operating on X11 Keysyms
+  - 42.17 Batch Mode
+  - 42.18 Session Management
+  - 42.19 Desktop Notifications
+  - 42.20 Notifications on File Changes
+  - 42.21 Dynamically Loaded Libraries
+  - 42.22 Security Considerations
+
+- 43. Preparing Lisp code for distribution
+  - 43.1 Packaging Basics
+  - 43.2 Simple Packages
+  - 43.3 Multi-file Packages
+  - 43.4 Creating and Maintaining Package Archives
+  - 43.5 Interfacing to an archive web server
+
+- Appendices
+  - Appendix A Emacs 28 Antinews
+  - Appendix B GNU Free Documentation License
+  - Appendix C GNU General Public License
+  - Appendix D Tips and Conventions
+  - D.1 Emacs Lisp Coding Conventions
+  - D.2 Key Binding Conventions
+  - D.3 Emacs Programming Tips
+  - D.4 Tips for Making Compiled Code Fast
+  - D.5 Tips for Avoiding Compiler Warnings
+  - D.6 Tips for Documentation Strings
+  - D.7 Tips on Writing Comments
+  - D.8 Conventional Headers for Emacs Libraries
+
+  - Appendix E GNU Emacs Internals
+  - E.1 Building Emacs
+  - E.2 Pure Storage
+  - E.3 Garbage Collection
+  - E.4 Stack-allocated Objects
+  - E.5 Memory Usage
+  - E.6 C Dialect
+  - E.7 Writing Emacs Primitives
+  - E.8 Writing Dynamically-Loaded Modules
+  - E.8.1 Module Initialization Code
+  - E.8.2 Writing Module Functions
+  - E.8.3 Conversion Between Lisp and Module Values
+  - E.8.4 Miscellaneous Convenience Functions for Modules
+  - E.8.5 Nonlocal Exits in Modules
+  - E.9 Object Internals
+  - E.9.1 Buffer Internals
+  - E.9.2 Window Internals
+  - E.9.3 Process Internals
+  - E.10 C Integer Types
+
+  - Appendix F Standard Errors
+  - Appendix G Standard Keymaps
+  - Appendix H Standard Hooks
+  - Index
